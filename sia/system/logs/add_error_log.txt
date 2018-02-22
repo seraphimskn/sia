@@ -1,0 +1,1 @@
+Error: Code: HY093 - Line 54 - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined.\r\n

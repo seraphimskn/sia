@@ -1,0 +1,1 @@
+Error: Code: HY000 - Line 202 - SQLSTATE[HY000]: General error: No fetch class specified.\r\n
