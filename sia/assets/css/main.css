@@ -1,0 +1,34 @@
+/** DEFAULTS AND RESETS **/
+*{margin: 0; padding: 0}
+ul, li{list-style-type: none}
+a, a:visited, a:active, a:hover{color: #333333; text-decoration: none}
+
+/** HEADER STYLES **/
+header{position: relative; width: 100%; min-height: 47.5em}
+header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+header #banner img{width: 100%;}
+header #header-streaming{position: absolute; z-index: 1; top: 21em; left: 25em; width: 20em;}
+header #header-streaming img{width: 100%;}
+header #main-navigation{top: 34em; position: relative; z-index: 1; float: left; width: 100%; height: 9em;}
+header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+#logo{width: 14em; z-index: 5; bottom: 1em; left: 2em}
+#logo img{width: 100%;}
+#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 14em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1.5em 7em 1.5em 15em;}
+header #main-navigation nav a{color: #FFFFFF; margin: 0 0.5em}
+header #main-navigation nav a:hover{color: #80C6FF}
+header #main-navigation nav form{position: relative; float: right; width: 12em;}
+header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10}
+header #main-navigation nav form a{color: #76AADB; right: 0; position: absolute; z-index: 11}
+
+/** FOOTER STYLES **/
+footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+footer #logoFooter{padding-top: 10em; padding-bottom: 8em;  margin-left: 15em; float: left; width: 10em;}
+footer #logoFooter img{width: 100%;}
+footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+footer #sitemap ul li a{color: #FFFFFF}
+footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+footer #band img{width: 20%;}
+footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
