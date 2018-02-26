@@ -23,14 +23,14 @@
     	</div>
 	</div>
 	<div class="col-6">
-		<div class="socialmedias">
+		<div class="socialmedias col-4">
 			<a href="{$youtube_link}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 			<a href="{$facebook_link}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			<a href="{$twitter_link}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 			<a href="{$instagram_link}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 		</div>
-		<div class="adbutton">
-			<a href=#><img src="assets/imgs/addbutton.png" alt="adbutton" title="Quero Anunciar na BandNews" /></a>
+		<div class="adbutton col-6">
+			<a href=#><img src="assets/imgs/addbutton.png" alt="adbutton" title="Quero Anunciar na BandNews" class="img-fluid" /></a>
 		</div>
 		<span id="slogan">Em 20 minutos, tudo pode mudar.</span>
 	</div>
