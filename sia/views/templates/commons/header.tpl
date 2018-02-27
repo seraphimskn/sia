@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
+<base href="{$baseHREF}" />
 <meta charset="utf-8" />
 <meta name="keywords" content="{$keywords}" />
 <meta name="description" content="{$meta_description}" />
@@ -32,7 +33,7 @@
 		<div id="logo">
 			<a href="./"><img src="{$logo}" alt="{$logo}" title="{$logo_title}" class="img-fluid"></a>
 		</div>
-		<div id="date">{$date}</div>
+		<div id="date">{utf8_encode($date)}</div>
 		<nav>
 			{foreach $navItem as $link}
 				<a href="{$link->slug}">{$link->page}</a>

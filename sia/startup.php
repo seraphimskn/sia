@@ -8,7 +8,6 @@ Smarty_Autoloader::register();       //starts the Smarty compiler
 $smarty     = new Smarty();          //setup the Smarty() object
 $mail       = new PHPMailer;         //setup the mailer object
 
-
 //if isn't on the developing ambience, set to false 
 $smarty->debugging = false;
 
@@ -103,26 +102,27 @@ if($router->getActions() === null){
             
     }else{
         
+        
        //checks if have more than one statement on the URI and treat it 
        foreach($router->getActions() as $action){
            
-           if(is_file($smarty->getTemplateDir('default').'commons/'.$action.'tpl')){
+           if(is_file($smarty->getTemplateDir('default').'commons/'.$action.'.tpl')){
             
-               $body = $smarty->getTemplateDir('default').'commons/'.$action.'tpl';
+               $body = $smarty->getTemplateDir('default').'commons/'.$action.'.tpl';
                $body_controller = (object)$controller->getController('commons/'.$action);
             
-               break;
+                break;   
                
-           }elseif(is_file($smarty->getTemplateDir('default').'content/'.$action.'tpl')){
+           }elseif(is_file($smarty->getTemplateDir('default').'content/'.$action.'.tpl')){
                    
-               $body = $smarty->getTemplateDir('default').'content/'.$action.'tpl';
+               $body = $smarty->getTemplateDir('default').'content/'.$action.'.tpl';
                $body_controller = (object)$controller->getController('content/'.$action);
                
-               break;
+                break;
                
-           }elseif(is_file($smarty->getTemplateDir('default').'staff/'.$action.'tpl')){
+           }elseif(is_file($smarty->getTemplateDir('default').'staff/'.$action.'.tpl')){
                
-               $body = $smarty->getTemplateDir('default').'staff/'.$action.'tpl';
+               $body = $smarty->getTemplateDir('default').'staff/'.$action.'.tpl';
                $body_controller = (object)$controller->getController('staff/'.$action);
                
                break;

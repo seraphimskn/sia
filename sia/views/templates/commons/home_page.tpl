@@ -11,15 +11,41 @@
 			<a href="{$instagram_link}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 		</div>
 	</div>
-	<div id="carousel">
-		<pre>
-		{var_dump($staffs)}
-		</pre>
+	<div id="carousel" class="row">
+		{foreach $staffs as $staff}
+			<article class="col-4">
+				<a href="staff/{$staff->link}">
+					<img src="{$staff->image}" title="{$staff->post_title}" alt="{$staff->image}" />
+					<h4 class="staff-name">{$staff->post_title}</h4>
+					<p>{$staff->excerpt}</p>
+				</a>
+			</article>
+		{/foreach}
 	</div>
 </section>
-<section class="left">
-{include file="commons/left-sidebar.tpl"}
+<section class="row">
+<section class="latest-news row">
+{if isset($posts)}
+	{foreach $posts as $post}
+	<article id="article-view-{$post->ID}" class="col-10 home-view">
+		<a href="article/{$post->link}">{$post->post_options->Destaque}</a>
+		<small><a href="staff/{$post->author_link}">{$post->author_name}</a> - {$post->date}</small>
+		<a href="article/{$post->link}">
+			<p>{$post->excerpt}</p>
+		</a>
+	</article>
+	{/foreach}
+{/if}
 </section>
-<section class="right">
+<section class="featured-video col-10">
+<h4>V&iacute;deo em destaque</h4>
+{if isset($video)}
+	{$video->post_value}	
+{/if}
+</section>
+<section id="twitter" class="twitter-view col-4">
+</section>
+</section>
+<section class="row">
 {include file="commons/right-sidebar.tpl"}
 </section>

@@ -28,6 +28,9 @@ if(true === $scripts->error){
     $smarty->assign('scripts', $scripts->scripts); #scripts
 }
 
+//set the base href
+$smarty->assign('baseHREF', '/bandnews/site/');
+
 //arrays with the portughese date translation
 $pDay = array(
     'Domingo', 

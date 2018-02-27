@@ -35,28 +35,28 @@ $smarty->display($body);
 #the footers
 $smarty->display($footer);
 
-/* $media = array(
-    array(
-    'media_name'    => 'listen-button',
-    'media_title'   => 'Ouvir Rádio On-Line',
-    'attached_to'   =>  0,
-    'media_url'     => 'uploads/radio-listen-home.png',
-    'uploaded_on'   => date('Y-m-d H:i:s'),
-    'uploaded_by'   => 0,
+$postagem = array(
+    'post_title'    => 'Vídeo em Destaque',
+    'post_value'    => '<iframe width="560" height="315" src="https://www.youtube.com/embed/6NCEsWa7sUE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+    'post_type'     => 'video',
+    'post_images'   => '',
+    'published'     => 1,
+    'post_options'  => '',
+    'post_clicks'   => 0,
+    'created_on'    => date('Y-m-d H:i:s'),
+    'created_by'    => '{user: 0}',
     'updated_on'    => date('Y-m-d H:i:s'),
     'updated_by'    => 0,
-    'last_user_IP'  => '000.000.000'
-        ),
-    array(
-        'media_name'    => 'listen-off-button',
-        'media_title'   => 'Rádio Fora do Ar',
-        'attached_to'   =>  0,
-        'media_url'     => 'uploads/radio-listen-offair.png',
-        'uploaded_on'   => date('Y-m-d H:i:s'),
-        'uploaded_by'   => 0,
-        'updated_on'    => date('Y-m-d H:i:s'),
-        'updated_by'    => 0,
-        'last_user_IP'  => '000.000.000'
-    )
-);
- */
+    'last_user_IP'  => $_SERVER['REMOTE_ADDR'].'::'.$_SERVER['REMOTE_PORT']
+); 
+
+/*
+$media = array(
+            'attached_to'   =>  '{"post": { "3", "4"} }',
+            'updated_on'    => date('Y-m-d H:i:s'),
+            'updated_by'    => 0,
+            'last_user_IP'  => $_SERVER['REMOTE_ADDR'].'::'.$_SERVER['REMOTE_PORT']
+        );
+*/
+/*$addPost = $model->add($config_vars->tablePrefix.'posts', $postagem);*/
+/* $addPost = $model->update($config_vars->tablePrefix.'media', $media, 10);*/
