@@ -1,3 +1,4 @@
+{$facebookSDK}
 <section id="top row">
 	<div class="radiostreaming col-3">
 		<a href="{$streamingUrl}" target="_blank"><img src="{$streamingButton}" title="Ouça a Rádio BANDNEWS ao vivo!" alt="radio-online" class="img-fluid" /></a>
@@ -24,27 +25,38 @@
 	</div>
 </section>
 <section class="row">
-<section class="latest-news row">
-{if isset($posts)}
-	{foreach $posts as $post}
-	<article id="article-view-{$post->ID}" class="col-10 home-view">
-		<a href="article/{$post->link}">{$post->post_options->Destaque}</a>
-		<small><a href="staff/{$post->author_link}">{$post->author_name}</a> - {$post->date}</small>
-		<a href="article/{$post->link}">
-			<p>{$post->excerpt}</p>
-		</a>
-	</article>
-	{/foreach}
-{/if}
-</section>
-<section class="featured-video col-10">
-<h4>V&iacute;deo em destaque</h4>
-{if isset($video)}
-	{$video->post_value}	
-{/if}
-</section>
-<section id="twitter" class="twitter-view col-4">
-</section>
+    <section class="latest-news row">
+    {if isset($posts)}
+    	{foreach $posts as $post}
+    	<article id="article-view-{$post->ID}" class="col-10 home-view">
+    		<a href="article/{$post->link}">{$post->post_options->Destaque}</a>
+    		<small><a href="staff/{$post->author_link}">{$post->author_name}</a> - {$post->date}</small>
+    		<a href="article/{$post->link}">
+    			<p>{$post->excerpt}</p>
+    		</a>
+    	</article>
+    	{/foreach}
+    {/if}
+    </section>
+    <section class="externals row">
+        <section class="featured-video col-10">
+        <h4>V&iacute;deo em destaque</h4>
+        {if isset($video)}
+        	{$video->post_value}	
+        {/if}
+        </section>
+        <section id="twitter" class="twitter-view col-4">
+        	<a class="twitter-timeline" 
+        	   data-width="100%"  
+        	   data-chrome="noheader nofooter transparent noscrollbar"
+        	   data-tweet-limit="3" 
+        	   href="https://twitter.com/radiobandnewsfm?ref_src=twsrc%5Etfw">Tweets by BandNewsFMES</a> 
+        	   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </section>
+        <section id="facebook" class="facebook-view col-4">
+        	<div class="fb-root"></div>
+        </section>
+	</section>
 </section>
 <section class="row">
 {include file="commons/right-sidebar.tpl"}

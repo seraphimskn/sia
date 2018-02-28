@@ -1,5 +1,33 @@
 <?php 
 
+//calls the Facebook Javascript SDK
+$load->setScript($config_vars->scripts_path, 'facebook-sdk', 'facebook');
+$smarty->assign('facebookSDK', $load->getScript('facebook'));
+
+//set the namespace Facebook
+use Facebook\Facebook;
+
+//calls the Facebook library
+$load->setLibs('system/libs/facebook', 'autoload', 'facebook');
+
+//include the Facebook library
+require_once $load->getLib('facebook');
+
+/** sets the Facebook object 
+ *  
+ *  TODO: create the facebook configs on the table
+ * 
+ * @var \Facebook\Facebook $fb
+ */
+$fb = new Facebook([
+        'app_id' => '1915539438668479',
+        'app_secret' => '9410bc8bf4829753a9d599942fba4ab6',
+        'default_graph_version' => 'v2.12'
+]);
+
+//sets the API access token
+$fb->setDefaultAccessToken($fb->getApp()->getAccessToken());
+
 $streaming = $model->select($config_vars->tablePrefix.'configs', array('config_name'=>'streaming'));
 
 if(count($streaming) >= 1){

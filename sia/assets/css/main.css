@@ -4,7 +4,7 @@ ul, li{list-style-type: none}
 a, a:visited, a:active, a:hover{color: #333333; text-decoration: none}
 
 /** HEADER STYLES **/
-header{position: relative; width: 100%; min-height: 47.5em}
+header{position: relative; width: 100%; min-height: 45.5em}
 header #banner{float: left; width: 100%; position: absolute; z-index: 0}
 header #banner img{width: 100%;}
 header #header-streaming{position: absolute; z-index: 1; top: 21em; left: 25em; width: 20em;}
@@ -31,4 +31,8 @@ footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; m
 footer #sitemap ul li a{color: #FFFFFF}
 footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
 footer #band img{width: 20%;}
+footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem;}
+footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+footer .adbutton{margin-left: auto; margin-right: auto; margin-top: 5em;}
+footer #slogan{width: 100%; text-align: center; float: left; margin-top: 8em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
 footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}

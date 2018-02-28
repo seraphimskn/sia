@@ -10,30 +10,42 @@ class Load{
     private $styles      = array();
     private $libs        = array();
     
-    function setScript($path, $script){
+    function setScript($path, $script, $alias = null){
         
         if(is_dir($path) && file_exists($path.'/'.$script.'.js')){
-            $this->scripts[] = '<script src="'.$path.'/'.$script.'.js" language="javascript"></script>';
+            if(is_null($alias)){
+                $this->scripts[] = '<script src="'.$path.'/'.$script.'.js" language="javascript"></script>';
+            }else{
+                $this->scripts[$alias] = '<script src="'.$path.'/'.$script.'.js" language="javascript"></script>';
+            }
         }else{
             return false;
         }
         
     }
     
-    function setStyle($path, $style){
+    function setStyle($path, $style, $alias = null){
         
-        if(is_dir($path) && file_exists('./'.$path.'/'.$style.'.css')){
-            $this->styles[] = '<link href="./'.$path.'/'.$style.'.css" rel="stylesheet" type="text/css" />';
+        if(is_dir($path) && file_exists($path.'/'.$style.'.css')){
+            if(is_null($alias)){
+                $this->styles[] = '<link href="'.$path.'/'.$style.'.css" rel="stylesheet" type="text/css" />';
+            }else{
+                $this->styles[$alias] = '<link href="'.$path.'/'.$style.'.css" rel="stylesheet" type="text/css" />';
+            }
         }else{
             return false;
         }
         
     }
     
-    function setLibs($path, $lib){
+    function setLibs($path, $lib, $alias = null){
         
         if(is_dir($path) && file_exists($path.'/'.$lib.'.php')){
-            $this->libs[] = $path.'/'.$lib.'.php';
+            if(is_null($alias)){
+                $this->libs[] = $path.'/'.$lib.'.php';
+            }else{
+                $this->libs[$alias] = $path.'/'.$lib.'.php';
+            }
         }else{
             return false;
         }
@@ -58,6 +70,16 @@ class Load{
     
     }
     
+    function getScript($script){
+        
+        if(!isset($script) || is_null($script)){
+            return false;
+        }else{
+            return $this->scripts[$script];
+        }
+        
+    }
+    
     function getStyles() {
         
         $styles = "";
@@ -76,6 +98,16 @@ class Load{
         
     }
     
+    function getStyle($style){
+        
+        if(!isset($style) || is_null($style)){
+            return false;
+        }else{
+            return $this->styles[$style];
+        }
+        
+    }
+    
     function getLibs() {
         
         $libs = "";
@@ -91,6 +123,16 @@ class Load{
         }
         
         return array("libs" => $libs, "error" => $error);
+        
+    }
+    
+    function getLib($lib){
+        
+        if(!isset($lib) || is_null($lib)){
+            return false;
+        }else{
+            return $this->libs[$lib];
+        }
         
     }
     
