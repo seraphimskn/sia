@@ -50,14 +50,43 @@
         	   data-width="100%"  
         	   data-chrome="noheader nofooter transparent noscrollbar"
         	   data-tweet-limit="3" 
-        	   href="https://twitter.com/radiobandnewsfm?ref_src=twsrc%5Etfw">Tweets by BandNewsFMES</a> 
+        	   href="https://twitter.com/radiobandnewsfm?ref_src=twsrc%5Etfw">Siga a BandNewsFMES</a> 
         	   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </section>
         <section id="facebook" class="facebook-view col-4">
-        	<div class="fb-root"></div>
+        	<div class="fb-page" data-href="https://www.facebook.com/Bandnewses" 
+                	data-tabs="timeline" 
+                	data-small-header="false" 
+                	data-adapt-container-width="true" 
+                	data-hide-cover="false" 
+                	data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/Bandnewses" class="fb-xfbml-parse-ignore">
+                	<a href="https://www.facebook.com/Bandnewses">BandNews FM Espírito Santo</a>
+            	</blockquote>
+            </div>
         </section>
 	</section>
 </section>
 <section class="row">
-{include file="commons/right-sidebar.tpl"}
+    <section class="mostReaded col-10">
+		{foreach $most_readed as $bestnew}
+			<article id="article-view-{$bestnew->ID}" class="col-10 home-view">
+    		<a href="article/{$bestnew->link}">{$bestnew->post_options->Destaque}</a>
+    		<small><a href="staff/{$bestnew->author_link}">{$bestnew->author_name}</a> - {$bestnew->date}</small>
+    		<a href="article/{$bestnew->link}">
+    			<p>{$bestnew->excerpt}</p>
+    		</a>
+    	</article>
+		{/foreach}
+	</section>
+	<section class="authors col-10">
+		{foreach $staffs as $staff}
+			<article class="col-10">
+				<a href="staff/{$staff->link}">
+					<h5 class="staff-name">{$staff->post_title}</h5>
+					<img src="{$staff->image}" title="{$staff->post_title}" alt="{$staff->image}" />
+				</a>
+			</article>
+		{/foreach}
+	</section> 
 </section>

@@ -5,14 +5,6 @@
       xfbml            : true,
       version          : 'v2.12'
     });
-    
-    FB.api(
-    		'/Bandnewses',
-    		{fields: 'feed'},
-    		function (response){    			
-    				console.log(response);    			
-    		}
-    );
   };
 
   (function(d, s, id){

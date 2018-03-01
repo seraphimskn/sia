@@ -107,7 +107,7 @@ if($router->getActions() === null){
        foreach($router->getActions() as $action){
            
            if(is_file($smarty->getTemplateDir('default').'commons/'.$action.'.tpl')){
-            
+               
                $body = $smarty->getTemplateDir('default').'commons/'.$action.'.tpl';
                $body_controller = (object)$controller->getController('commons/'.$action);
             

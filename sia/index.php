@@ -36,15 +36,8 @@ $smarty->display($body);
 $smarty->display($footer);
 
 $postagem = array(
-    'post_title'    => 'Vídeo em Destaque',
-    'post_value'    => '<iframe width="560" height="315" src="https://www.youtube.com/embed/6NCEsWa7sUE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
-    'post_type'     => 'video',
-    'post_images'   => '',
-    'published'     => 1,
-    'post_options'  => '',
-    'post_clicks'   => 0,
-    'created_on'    => date('Y-m-d H:i:s'),
-    'created_by'    => '{user: 0}',
+    'page_value'    => '<h2>A BandNews FM</h2><p>A BandNews FM é a primeira rede brasileira de emissoras de rádio em FM com jornalismo 24 horas no ar. A cada 20 minutos, oferecemos ao ouvinte um jornal completo e atualizado, com a opinião dos nossos apresentadores e colunistas. Nestes 20 minutos, apresentamos as principais notícias do Brasil e do mundo, mas com grande espaço para o noticiário de cada cidade.</p><p>Desde 20 de maio de 2005 no ar, somos hoje referência em divulgação ágil de notícias nos principais mercados do país, transmitindo para São Paulo, Brasília, Rio de Janeiro, Belo Horizonte, Porto Alegre, Manaus, Salvador, Curitiba, Fortaleza, João Pessoa, Vitória e Orlando nos Estados Unidos, aliando força jornalística, inovação e alto astral, sempre com a credibilidade do Grupo Bandeirantes de Comunicação.</p>', 
+    'page_options'  => '{"destaque": "<img src=\"uploads/bandnewsfm.jpg\" alt=\"\" title=\"\">", "others":{"video", "twitter", "facebook"}}',
     'updated_on'    => date('Y-m-d H:i:s'),
     'updated_by'    => 0,
     'last_user_IP'  => $_SERVER['REMOTE_ADDR'].'::'.$_SERVER['REMOTE_PORT']
