@@ -36,8 +36,14 @@ $smarty->display($body);
 $smarty->display($footer);
 
 $postagem = array(
-    'page_value'    => '<h2>A BandNews FM</h2><p>A BandNews FM é a primeira rede brasileira de emissoras de rádio em FM com jornalismo 24 horas no ar. A cada 20 minutos, oferecemos ao ouvinte um jornal completo e atualizado, com a opinião dos nossos apresentadores e colunistas. Nestes 20 minutos, apresentamos as principais notícias do Brasil e do mundo, mas com grande espaço para o noticiário de cada cidade.</p><p>Desde 20 de maio de 2005 no ar, somos hoje referência em divulgação ágil de notícias nos principais mercados do país, transmitindo para São Paulo, Brasília, Rio de Janeiro, Belo Horizonte, Porto Alegre, Manaus, Salvador, Curitiba, Fortaleza, João Pessoa, Vitória e Orlando nos Estados Unidos, aliando força jornalística, inovação e alto astral, sempre com a credibilidade do Grupo Bandeirantes de Comunicação.</p>', 
-    'page_options'  => '{"destaque": "<img src=\"uploads/bandnewsfm.jpg\" alt=\"\" title=\"\">", "others":{"video", "twitter", "facebook"}}',
+    'page_title'    => 'Media Kit',
+    'page_type'     => 'mediakit',
+    'page_value'    => '',
+    'page_options'  => '',
+    'page_clicks'   => '',
+    'published'     => 1,
+    'created_on'    => date('Y-m-d H:i:s'),
+    'created_by'    => 0,
     'updated_on'    => date('Y-m-d H:i:s'),
     'updated_by'    => 0,
     'last_user_IP'  => $_SERVER['REMOTE_ADDR'].'::'.$_SERVER['REMOTE_PORT']
@@ -51,5 +57,5 @@ $media = array(
             'last_user_IP'  => $_SERVER['REMOTE_ADDR'].'::'.$_SERVER['REMOTE_PORT']
         );
 */
-/*$addPost = $model->add($config_vars->tablePrefix.'posts', $postagem);*/
-/* $addPost = $model->update($config_vars->tablePrefix.'media', $media, 10);*/
+/* $addPost = $model->add($config_vars->tablePrefix.'pages', $postagem); */
+/* $addPost = $model->update($config_vars->tablePrefix.'pages', $postagem, 7); */

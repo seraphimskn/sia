@@ -137,6 +137,7 @@ if($the_posts >= 1){
     
 }
 
+//retrieves the featured-video
 $the_video = $model->select($config_vars->tablePrefix.'posts', array('post_type'=>'video'), 'created_on', 'DESC');
 
 if($the_video >= 1){
@@ -145,6 +146,7 @@ if($the_video >= 1){
     $smarty->assign('video', 'No videos subscribed!');
 }
 
+//retrieves the most_readed articles
 $most_readed = $model->select($config_vars->tablePrefix.'posts', array('post_type'=>'post', 'published'=>1), 'post_clicks', 'DESC');
 
 if($most_readed >= 1){

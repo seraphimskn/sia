@@ -84,7 +84,7 @@ if(count($the_menu) !== 0){
     
     //retrieves the pages properties to construct the nav item
     foreach($pages_id as $id){
-    
+        
         foreach($model->select($config_vars->tablePrefix.'pages', array('ID'=>$id)) as $result){
             
             //starts the slugfy of the page link

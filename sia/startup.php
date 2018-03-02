@@ -73,24 +73,41 @@ if($router->getActions() === null){
     
 }else{
     
+    $actions = $router->getActions();
+    
     //checks if there is more than one statement passing on the URI
     if(!is_array($router->getActions())){
         
+        //redirects to the about-us page
+        if($actions === "bandnews_fm") $actions = "about-us";
+        
+        //redirects to the staff pages
+        if($actions === "apresentadores") $actions = "staff";
+        
+        //redirects to the programs page
+        if($actions === "programacao") $actions = "programs";
+        
+        //redirects to the articles page
+        if($actions === "noticias") $actions = "articles";
+        
+        //redirects to the contact-us page
+        if($actions === "fale_conosco") $actions = "contact";
+        
         //if have only one statement, redirect to the current view 
-        if(is_file($smarty->getTemplateDir('default').'commons/'.$router->getActions().'.tpl')){
+        if(is_file($smarty->getTemplateDir('default').'commons/'.$actions.'.tpl')){
             
-            $body = $smarty->getTemplateDir('default').'commons/'.$router->getActions().'.tpl';
-            $body_controller = (object)$controller->getController('commons/'.$router->getActions());
+            $body = $smarty->getTemplateDir('default').'commons/'.$actions.'.tpl';
+            $body_controller = (object)$controller->getController('commons/'.$actions);
             
-        }elseif(is_file($smarty->getTemplateDir('default').'content/'.$router->getActions().'.tpl')){
+        }elseif(is_file($smarty->getTemplateDir('default').'content/'.$actions.'.tpl')){
             
-            $body = $smarty->getTemplateDir('default').'content/'.$router->getActions().'.tpl';
-            $body_controller = (object)$controller->getController('content/'.$router->getActions());
+            $body = $smarty->getTemplateDir('default').'content/'.$actions.'.tpl';
+            $body_controller = (object)$controller->getController('content/'.$actions);
             
-        }elseif(is_file($smarty->getTemplateDir('default').'staff/'.$router->getActions().'.tpl')){
+        }elseif(is_file($smarty->getTemplateDir('default').'staff/'.$actions.'.tpl')){
             
-            $body = $smarty->getTemplateDir('default').'staff/'.$router->getActions().'.tpl';
-            $body_controller = (object)$controller->getController('staff/'.$router->getActions());
+            $body = $smarty->getTemplateDir('default').'staff/'.$actions.'.tpl';
+            $body_controller = (object)$controller->getController('staff/'.$actions);
             
         }else{
             
@@ -106,11 +123,26 @@ if($router->getActions() === null){
        //checks if have more than one statement on the URI and treat it 
        foreach($router->getActions() as $action){
            
+           //redirects to the about-us page
+           if($action === "bandnews_fm") $action = "about-us";
+           
+           //redirects to the staff pages
+           if($action === "apresentadores") $action = "staff";
+           
+           //redirects to the programs page
+           if($action === "programacao") $action = "programs";
+           
+           //redirects to the articles page
+           if($action === "noticias") $action = "articles";
+           
+           //redirects to the contact-us page
+           if($action === "fale_conosco") $action = "contact";
+           
            if(is_file($smarty->getTemplateDir('default').'commons/'.$action.'.tpl')){
                
                $body = $smarty->getTemplateDir('default').'commons/'.$action.'.tpl';
                $body_controller = (object)$controller->getController('commons/'.$action);
-            
+                
                 break;   
                
            }elseif(is_file($smarty->getTemplateDir('default').'content/'.$action.'.tpl')){
