@@ -1,7 +1,5 @@
-<section class="newsletter col-10">
+<section class="newsletter col-12">
 	<form enctype="multipart/form-data" method="post" action="">
-		<input type="email" placeholder="E-mail" name="newsletter-subscribe"
-			required />
-		<button type="submit" name="enviar">RECEBER NEWSLETTER</button>
+		<input type="email" placeholder="E-mail" name="newsletter-subscribe" required class="form-control"/><button type="submit" name="enviar" class="btn btn-light">RECEBER NEWSLETTER</button>
 	</form>
-</section>
+</section> 

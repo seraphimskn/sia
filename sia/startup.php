@@ -138,6 +138,9 @@ if($router->getActions() === null){
            //redirects to the contact-us page
            if($action === "fale_conosco") $action = "contact";
            
+           //redirects to the single-staff info page
+           if($action === "staff") $action = "single-staff";
+           
            if(is_file($smarty->getTemplateDir('default').'commons/'.$action.'.tpl')){
                
                $body = $smarty->getTemplateDir('default').'commons/'.$action.'.tpl';

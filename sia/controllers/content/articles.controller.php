@@ -17,13 +17,13 @@ if($articles >= 1){
     
     foreach($articles as $the_post){
         
-        $the_post->post_images  = json_decode($the_post->post_images);
-        $the_post->excerpt      = substr($the_post->post_value, 0, 150).'...';
-        $the_post->date         = preg_replace('/[\/]+/', ' de ', date_format(date_create($the_post->created_on), 'd/M/Y - H:i:s'));
-        $author                 = json_decode($the_post->created_by);
-        $the_post->post_options = json_decode($the_post->post_options);
-        $the_post->author       = $model->select($config_vars->tablePrefix.'posts', array('post_type'=>$author->author->post_type, 'ID'=>$author->author->post_ID));
-        $the_post->author_name       = $the_post->author[0]->post_title;
+        $the_post->post_images      = json_decode($the_post->post_images);
+        $the_post->excerpt          = substr($the_post->post_value, 0, 150).'...';
+        $the_post->date             = preg_replace('/[\/]+/', ' de ', date_format(date_create($the_post->created_on), 'd/M/Y - H:i:s'));
+        $author                     = json_decode($the_post->created_by);
+        $the_post->post_options     = json_decode($the_post->post_options);
+        $the_post->author           = $model->select($config_vars->tablePrefix.'posts', array('post_type'=>$author->author->post_type, 'ID'=>$author->author->post_ID));
+        $the_post->author_name      = $the_post->author[0]->post_title;
         
         $the_post->link = preg_replace('/\s+/', '_', $the_post->post_title);
         $the_post->author_link = preg_replace('/\s+/', '_', $the_post->author[0]->post_title);

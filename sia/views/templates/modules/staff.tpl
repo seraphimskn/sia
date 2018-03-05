@@ -1,11 +1,9 @@
-<section class="authors col-10">
-	{foreach $staffs as $staff}
-	<article class="col-10">
-		<a href="staff/{$staff->link}">
-			<h5 class="staff-name">{$staff->post_title}</h5> <img
-			src="{$staff->image}" title="{$staff->post_title}"
-			alt="{$staff->image}" />
-		</a>
-	</article>
-	{/foreach}
+<section class="authors col-12">
+    <ul>
+    	{foreach $staffs as $staff}
+    	<li>
+    		<a href="staff/{$staff->link}"><span class="staff-name">{$staff->post_title}</span><img src="{$staff->image}" title="{$staff->post_title}" alt="{$staff->image}" class="img-fluid" /></a>
+    	</li>
+    {/foreach}
+	</ul>
 </section>

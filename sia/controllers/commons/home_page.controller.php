@@ -106,7 +106,7 @@ if($the_posts >= 1){
     foreach($the_posts as $the_post){
         
         $the_post->post_images  = json_decode($the_post->post_images);
-        $the_post->excerpt      = substr($the_post->post_value, 0, 150).'...';
+        $the_post->excerpt      = substr($the_post->post_value, 0, 100).'...';
         $the_post->date         = preg_replace('/[\/]+/', ' de ', date_format(date_create($the_post->created_on), 'd/M/Y - H:i:s'));
         $author                 = json_decode($the_post->created_by);
         $the_post->post_options = json_decode($the_post->post_options);
