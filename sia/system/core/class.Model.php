@@ -10,6 +10,8 @@ class Model{
     private static $dsn;
     private static $username;
     private static $password;
+    private $model;
+    private $error;
     private $statement;
     private $parameters = array();
     private $fields     = array();
@@ -17,11 +19,33 @@ class Model{
     static function getConn(){
         
         if(is_null(self::$conn)){
-            self::$conn = new PDO(self::$dsn, self::$username, self::$password);
+            self::$conn = new PDO(self::$dsn, self::$username, self::$password, array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8"));
             self::$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }
         return self::$conn;
     }
+    
+    private function setModel($model){
+        
+        if(file_exists("models/" . $model . ".model.php")){
+            
+            $this->model = "models/" . $model . ".model.php";
+            
+        }else{
+            
+            $this->model = null;
+            $this->error = true;
+        }
+        
+    }
+    
+    function getModel($model){
+        
+        self::setModel($model);
+        
+        return array('error' => $this->error, 'model' => $this->model);
+        
+    }   
     
     private function setParameters($params = array()){
         
