@@ -1,10 +1,14 @@
+/*FA IMPORT*/
+@import url("font-awesome.css");
+
 /*CSS RESET*/
 *{margin: 0; padding: 0}
 .row{margin-left: 0; margin-right: 0;}
 ul{list-style-type: none;}
+.grey{color: #808080!important;}
 
 /*DEFAULTS*/
-div.top{padding-left: 25vw; padding-top: 2em; padding-bottom: 1.85em; border-bottom: solid 2px #c4c4c4;background-color: #EFEFEF}
+div.top{padding-left: 21vw; padding-top: 2em; padding-bottom: 1.85em; border-bottom: solid 2px #c4c4c4;background-color: #EFEFEF}
 div.top .breadcrumbs, div.top .breadcrumbs a{color: #7E7E7E}
 div.top .breadcrumbs i{margin-right: 0.5em;}
 div.top div.avatar{text-align: right; padding-right: 5em;}
@@ -13,14 +17,38 @@ div.top div.avatar ul.hidden-menu{position: absolute; opacity: 0; -moz-opacity: 
 div.top div.avatar ul.hidden-menu.active{top: 100%; opacity: 1; -moz-opacity: 1; -o-opacity: 1; -webkit-opacity: 1;}
 div.top div.avatar ul.hidden-menu li{float: left;}
 div.top div.avatar ul.hidden-menu li.quit a{color: #900;}
-div.welcome{background-color: rgba(255, 255, 255, 0.95); padding-top: 0.6em; padding-bottom: 0.55em; padding-left: 25vw; font-weight: bold; border-bottom: solid 2px #c4c4c4}
+div.welcome{background-color: rgba(255, 255, 255, 0.95); padding-top: 0.6em; padding-bottom: 0.55em; padding-left: 22vw; font-weight: bold; border-bottom: solid 2px #c4c4c4}
 nav.vertical-nav{float: left; position: fixed; left: 0; top: 0; height: 100vh; z-index: 10;}
 nav.vertical-nav h2.site-title{padding: 1em 0.5em 0 0.5em; text-transform: uppercase}
-nav.vertical-nav .bar{float: left; background-color: rgba(0, 0, 0, 0.25); height: 5vh; margin: 1.5em 0 5em 0;}
+nav.vertical-nav .bar{float: left; background-color: rgba(0, 0, 0, 0.25); height: 2.9em; margin: 1.5em 0 5em 0;}
 nav.vertical-nav ul{padding: 0 2.5em;}
 nav.vertical-nav ul li{margin: 2em 0;}
 nav.vertical-nav ul li a{font-weight: bold;}
+@media only screen and (max-width: 1023px){
+	nav.vertical-nav:after{content: '\f0c9'; font-family: fontawesome; font-size: 1.5rem; position: absolute; right: -1.5em; top: 0;}
+	nav.vertical-nav{left: -21em; transition: left 1s;}
+	nav.vertical-nav.active{left: 0;}
+	div.top{padding-left: 2.5em;}
+	div.top .breadcrumbs i{display: none;}
+	div.welcome{padding-left: 3.5em;}
+}
+div#main.internal{float: left; padding-left: 22vw; background-color: rgba(255, 255, 255, 0.45);}
 
+/*HOME*/
+div.top-row{margin-top: 2em}
+div.middle-row{width: 100%; margin-top: 1.5em;}
+div.bottom-row{width: 100%; margin-top: 1.5em;}
+section.dock{background-color: #FFFFFF; margin: 0 0.75em; padding-top: 1em; padding-bottom: 1.5em; text-align: center;}
+section.dock.first{margin-left: 0;}
+section.dock span{float: left; width: 100%; font-weight: bold;}
+section.dock span.title{font-size: 1.2rem}
+section.dock span.results{font-size: 1.6rem;}
+section.dock.monthly-partial{color: #FFFFFF;}
+section.dock.graphic.lines{width: 70.5%;}
+section.dock.posts article.post{position: relative; float: left; color: #AFAFAF; width: 100%; margin: 0.25em 0}
+section.dock.posts article.post a{text-align: left; float: left; color: #AFAFAF;}
+section.dock.posts article.post .clickstats{text-align: right; float: right; color: #AFAFAF; width: auto;}
+section.dock.posts a.btn{position: absolute; bottom: 1em; right: 1em;}
 /*LOGIN*/
 #loginForm .msg{margin: 5vh auto;}
 #loginForm .main-logo{margin: 20vh auto 1vh auto; text-align: center; padding: 0!important;}
@@ -28,5 +56,5 @@ nav.vertical-nav ul li a{font-weight: bold;}
 #loginForm .form.dock input:not([type="checkbox"]){margin: 2em 0;}
 
 /*FOOTER*/
-footer{float: left; width: 100%; height: 2em; font-size: 0.825rem; position: absolute; bottom: 0;}
+footer{float: left; width: 75vw; margin-top: 1.5em; margin-bottom: 2em; padding-top: 1em; padding-bottom: 1em; background-color: #FFFFFF; font-size: 0.825rem;}
 footer span{width: 100%; float: left; text-align: center}

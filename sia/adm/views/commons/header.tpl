@@ -12,7 +12,8 @@
 nav a, nav ul, nav li, nav a:visited, nav a:hover{ldelim}color:{$configs['font-color']};{rdelim}
 body{ldelim}background-color:{$configs['primary-color']};{rdelim}
 nav{ldelim}background-color:{$configs['secondary-color']};{rdelim}
-div.welcome{ldelim}color:{$configs['primary-color']};{rdelim}
+div.welcome, section.dock:not(.monthly-partial) span.title{ldelim}color:{$configs['primary-color']};{rdelim}
+section.dock.monthly-partial{ldelim}background-color:{$configs['primary-color']};{rdelim}
 </style>
 </head>
 <body>

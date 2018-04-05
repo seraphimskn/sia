@@ -79,7 +79,25 @@ if(!isset($_SESSION['logged'])){
     $the_model = (object)$model->getModel('commons/home');
 }else{
     
-    
+    if(!is_array($router->getActions())){
+        
+        $action = $router->getActions();
+        
+        if($action == 'relatorios' || $action == 'painel_de_controle'){
+            $the_folder = 'commons';
+        }elseif($action == 'configuracoes' || $actions == 'users'){
+            $the_folder = 'configs';
+        }elseif($action == 'medias'){
+            $the_folder = 'media';
+        }elseif($action == 'paginas'){
+            $the_folder = 'pages';
+        }elseif($action == 'publicacoes'){
+            $the_folder = 'posts';
+        }
+        
+    }elseif(is_array($router->getActions())){
+        
+    }
     
 }
 
