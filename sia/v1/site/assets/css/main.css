@@ -1,0 +1,1463 @@
+/** DEFAULTS AND RESETS **/
+@import url('font-awesome.css');
+*{margin: 0; padding: 0}
+ul, li{list-style-type: none}
+a, a:visited, a:active, a:hover{color: #333333; text-decoration: none}
+body{overflow-x: hidden;}
+.row{padding: 0; margin-left: 0; margin-right: 0;}
+
+/** Header changes for the mobile **/
+@media only screen and (min-width: 320px) and (max-width: 1023px){
+	header{position: relative; width: 100%; float: left; background-image: url('../imgs/mobile-header.jpg'); background-position: bottom right; background-size: cover; background-repeat: no-repeat; margin-bottom: 1em;}
+	header #banner{display: none;}
+	header #header-streaming{display: none;}
+	header #main-navigation{display: none;}
+	#logo.mobile{float: left; width: 8em; margin-left: 4em; margin-top: 1em; padding-bottom: 0.5em;}
+	#logo.mobile img{width: 100%;}
+	header #mobile-navigation{background-color: #00467F; width: 50%; height: 100vh; top: 0; left: -50%; padding: 0.5em 1em 3em 1em; position: absolute; z-index: 99; border-radius: 0 0 1.5em 0; color: #FFFFFF; transition: left 2s; -webkit-transition: left .5s;}
+	header #mobile-navigation::after{content:"\f0c9"; font-family: FontAwesome; padding: 0.5em; font-size: 1.25rem; background-color: #00467F; position: absolute; left: 100%; top: 0;}
+	header #mobile-navigation a:not(.search){float: left; color: #FFFFFF; margin: 0.5em 0.25em; width: 100%;}
+	header #mobile-navigation a:hover{color: #80C6FF}
+	header #mobile-navigation form{position: relative; float: right; width: 100%; margin-top: 1em;}
+	header #mobile-navigation form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #mobile-navigation form a{color: #76AADB; position: absolute; z-index: 11; top: -0em; right: 0.5em;}
+	header #mobile-navigation.active{left: 0;}
+}
+
+@media only screen and (min-width: 1024px){
+	#mobile-navigation{display: none;}
+	#logo.mobile{display: none;}	
+}
+
+/** 320px **/
+@media only screen and (min-width: 320px) and (max-width: 766px){
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 2em; padding: 0 2em;}
+	#top .radiostreaming a{width: 100%; float: left;}
+	#top .radiostreaming a img{width: 100%;}
+	#top .socialmedias{display: none;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; margin-bottom: 1em; margin-left: 0em; padding: 0;}
+	#top #carousel article a{float: left;}
+	#top #carousel article a h2{color: #FFFFFF; margin-top: -1.5em; font-size: 1.75rem; font-weight: bolder; width: 100%; text-align: center;}
+	#top #carousel article a p{display: none;}
+	#mid{margin-top: 1em; padding: 0 2em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 100%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f; display: none;}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em; text-align: justify;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 1.7rem; font-weight: bolder; color: #809EC3; width: 100%; text-align: center;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 0; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 0; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em; margin-top: 1em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{display: none;}
+	#mid .newsletter{float: left; padding: 0; width: 100%;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 100%!important; margin: 0.5em 0;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 2em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 1em; margin-right: 1em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.0rem; font-weight: bolder; color: #006691; width: 100%; text-align: center;}
+	.internal.main .pagetitle .socialmedias{display: none;}
+	.internal.main .staffs{padding: 0em; margin-left: 0em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 0em; margin-top: 1em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em; float: left;}
+	.internal.main .article-view .share div{float: left; width: 100%; margin: 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 50%; height: 100%; float: right;}
+	.authors ul li span{width: 50%; text-align: left; float: left; padding: 0.75em 0.5em 0.5em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 1.5rem; font-weight: bolder; color: #809EC3; width: 100%; text-align: center;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 0; margin-top: 1em; float: left;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 0; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em; margin-top: 1em;}
+	.mostReaded h2{color: #006691; font-weight: bold; font-size: 1.75rem; padding-top: 0.5em; margin-left: 0; width: 100%; text-align: center;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 100%!important; margin: 0.5em 0}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 0em; padding-bottom: 0em;  margin-left: 1em; margin-top: 2em; float: left; width: 5em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{display: none;}
+	footer #band{float: left; padding: 1.5em 0; width: 50%; margin-left: 1.5em; margin-top: 2em;}
+	footer #band img{width: 100%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+	
+}
+
+/** 320px **/
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 2em; padding: 0 2em;}
+	#top .radiostreaming a{width: 100%; float: left;}
+	#top .radiostreaming a img{width: 100%;}
+	#top .socialmedias{display: none;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; margin-bottom: 1em; margin-left: 0em; padding: 0;}
+	#top #carousel article a{float: left;}
+	#top #carousel article a h2{color: #FFFFFF; margin-top: -1.5em; font-size: 1.75rem; font-weight: bolder; width: 100%; text-align: center;}
+	#top #carousel article a p{display: none;}
+	#mid{margin-top: 1em; padding: 0 2em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 100%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f;}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em; text-align: justify;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 1.7rem; font-weight: bolder; color: #809EC3; width: 100%; text-align: left;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 0.5em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em; margin-top: 1em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{display: none;}
+	#mid .newsletter{float: left; padding: 0; width: 100%;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 100%!important; margin: 0.5em 0;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 2em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .about.modules #twitter{margin-left: 1em; margin-right: 0.5em}
+	.internal.main .programs.modules #twitter{margin-left: 1em; margin-right: 0.5em}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 1em; margin-right: 1em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.0rem; font-weight: bolder; color: #006691; width: 100%; text-align: center;}
+	.internal.main .pagetitle .socialmedias{display: none;}
+	.internal.main .staffs{padding: 0em; margin-left: 0em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 0em; margin-top: 1em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em; float: left;}
+	.internal.main .article-view .share div{float: left; width: 45%; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 50%; height: 100%; float: right;}
+	.authors ul li span{width: 50%; text-align: left; float: left; padding: 0.75em 0.5em 0.5em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 1.5rem; font-weight: bolder; color: #809EC3; width: 100%; text-align: center;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	.modules #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 0; margin-top: 1em; float: left;}
+	
+	/** TWITTER **/
+	.modules #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 0; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em; margin-top: 1em;}
+	.mostReaded h2{color: #006691; font-weight: bold; font-size: 1.75rem; padding-top: 0.5em; margin-left: 0; width: 100%; text-align: center;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 100%!important; margin: 0.5em 0}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 0em; padding-bottom: 0em;  margin-left: 1em; margin-top: 2em; float: left; width: 5em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{display: none;}
+	footer #band{float: left; padding: 1.5em 0; width: 50%; margin-left: 1.5em; margin-top: 2em;}
+	footer #band img{width: 100%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+	
+}
+
+/** 1024px **/
+@media only screen and (min-width: 1024px) and (max-width: 1179px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 30em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 13em; left: 10em; width: 18em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 21em; position: relative; z-index: 1; float: left; width: 100%; height: 9em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 11em; z-index: 5; bottom: 0.75em; left: 1em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 10em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1.5em 1em 1.5em 10.5em;}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 8em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 1em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#mid{margin-top: 1em; padding: 0 1em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 25%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 1em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 1em; margin-right: 1em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 2.5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 5em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 30%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1180px **/
+@media only screen and (min-width: 1180px) and (max-width: 1329px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 35em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 15em; left: 12em; width: 18em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 25em; position: relative; z-index: 1; float: left; width: 100%; height: 9em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 12em; z-index: 5; bottom: 0.2em; left: 1em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 11em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1.5em 2em 1.5em 12em;}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.5em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 5em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 4em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 25%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 5em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 1em; margin-right: 1em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 3em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 5em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 30%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1330px **/
+@media only screen and (min-width: 1330px) and (max-width: 1439px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 40em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 18em; left: 15em; width: 20em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 28em; position: relative; z-index: 1; float: left; width: 100%; height: 10em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 14em; z-index: 5; bottom: 0.2em; left: 2em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 13em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1em 2em 1em 11em; font-size: 1.25rem}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 7em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 6em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 25%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 7em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 1em; margin-right: 1em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 5em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 30%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1440px **/
+@media only screen and (min-width: 1440px) and (max-width: 1599px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 42em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 18em; left: 15em; width: 20em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 30em; position: relative; z-index: 1; float: left; width: 100%; height: 10em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 14em; z-index: 5; bottom: 0.2em; left: 4em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 15em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1em 4em 1em 13em; font-size: 1.25rem}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0.5em; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 10em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 9em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 25%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 9em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 1em; margin-right: 1em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 0.75em 0.5em 0.75em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 5em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 30%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1600px **/
+@media only screen and (min-width: 1600px) and (max-width: 1719px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 45em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 20em; left: 15em; width: 20em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 35em; position: relative; z-index: 1; float: left; width: 100%; height: 10em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 14em; z-index: 5; bottom: 0.2em; left: 8em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 18em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1em 8em 1em 17em; font-size: 1.25rem}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0.5em; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 15em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 15em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; max-height: 4.4em; margin: 0.5em 0; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 15%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 15em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 2em; margin-right: 2em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 8em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 25%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1720px **/
+@media only screen and (min-width: 1720px) and (max-width: 1899px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 48em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 23em; left: 18em; width: 24em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 38em; position: relative; z-index: 1; float: left; width: 100%; height: 10em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 14em; z-index: 5; bottom: 0.2em; left: 8em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 18em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1em 8em 1em 17em; font-size: 1.25rem}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0.5em; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 18em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 18em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 25%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 18em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 2em; margin-right: 2em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 8em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 25%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1900px **/
+@media only screen and (min-width: 1900px) and (max-width: 1919px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 50em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 25em; left: 18em; width: 24em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 40em; position: relative; z-index: 1; float: left; width: 100%; height: 10em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 14em; z-index: 5; bottom: 0.2em; left: 8em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 2em 0em 1em 18em; bottom: 3.5em; display: block; color: #FFFFFF; font-size: 1.250rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1em 15em 1em 17em; font-size: 1.25rem}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0.5em; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 18em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 18em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 25%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 18em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 2em; margin-right: 2em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 15em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 25%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
+
+/** 1920px **/
+@media only screen and (min-width: 1920px){
+	/** HEADER STYLES **/
+	header{position: relative; width: 100%; min-height: 52em}
+	header #banner{float: left; width: 100%; position: absolute; z-index: 0}
+	header #banner img{width: 100%;}
+	header #header-streaming{position: absolute; z-index: 1; top: 25em; left: 20em; width: 25em;}
+	header #header-streaming img{width: 100%;}
+	header #main-navigation{top: 40em; position: relative; z-index: 1; float: left; width: 100%; height: 12em;}
+	header #main-navigation #logo, header #main-navigation #date, header #main-navigation nav{position: absolute;}
+	#logo{width: 15em; z-index: 5; bottom: 0.2em; left: 15em}
+	#logo img{width: 100%;}
+	#date{width: 100%; background-image: url('../imgs/date-background.png'); background-size: cover; background-repeat: no-repeat; background-position: top center; padding: 3em 0em 1.5em 20em; bottom: 3em; display: block; color: #FFFFFF; font-size: 1.5rem;}
+	header #main-navigation nav{background-color: #00467F; width: 100%; bottom: 0; padding: 1.5em 15em 1.25em 23em; font-size: 1.25rem}
+	header #main-navigation nav a{color: #FFFFFF; margin: 0 0.25em}
+	header #main-navigation nav a:hover{color: #80C6FF}
+	header #main-navigation nav form{position: relative; float: right; width: 10em;}
+	header #main-navigation nav form input{border: none; border-radius: 5em; padding: 0 0.75em; position: absolute; z-index: 10; width: 100%;}
+	header #main-navigation nav form a{color: #76AADB; right: 0.5em; position: absolute; z-index: 11}
+	
+	/** HOME PAGE STYLES **/
+	#top{margin-top: 1em; padding: 0 20em;}
+	#top .socialmedias{text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	#top .socialmedias .links{float: right; margin-left: 1em}
+	#top .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	#top #carousel{margin-top: 1em; padding: 0;}
+	#top #carousel article a{float: left; color: #7898AD;}
+	#top #carousel article a h2{margin-top: 0.25em; font-weight: bolder;}
+	#top #carousel article a img{width: 100%;}
+	#mid{margin-top: 1em; padding: 0 20em; margin-bottom: 1em}
+	#mid .latest-news article.home-view{padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	#mid .latest-news article.home-view a{float: left;}
+	#mid .latest-news article.home-view a.featured-image.link{width: 38.5%;}
+	#mid .latest-news article.home-view a img{width: 100%; float: left;}
+	#mid .latest-news article.home-view small{float: left; margin-left: 1em; margin-top: -0.5em; color: #27628E; width: 52.5%;}
+	#mid .latest-news article.home-view small a{color: #1e4d6f}
+	#mid .latest-news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 52.5%; margin-left: 0.5em;}
+	#mid .latest-news article.home-view a.excerpt{float: left; width: 56.5%; margin-left: 0.75em; margin-top: 0.25em;}
+	#mid .externals{margin-top: 1em;}
+	#mid .externals .featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	#mid .externals .featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 98%;}
+	#mid .externals #twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .externals #facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em;}
+	#mid .mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	#mid .mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	#mid .mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	#mid .mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	#mid .mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	#mid .mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	#mid .authors{float:left; padding: 0; margin-top: 1em}
+	#mid .authors ul{float: left; width: 100%; display: block}
+	#mid .authors ul li{float: left; width: 100%; margin: 0.5em 0; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	#mid .authors ul li a img{width: 20%; height: 100%; float: right;}
+	#mid .authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	#mid .authors ul li a span{color: #FFF;}
+	#mid .newsletter{float: left; padding: 0;}
+	#mid .newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** INTERNAL STYLES**/
+	.no-wrap{padding: 0;}
+	.internal.main{padding: 0 20em; margin-top: 1em; margin-bottom: 1em;}
+	.internal.main .featured.content{float: left; width: 100%; margin-bottom: 1em;}
+	.internal.main .featured.content img{width: 100%;}
+	.internal.main .content h2{color: #085974; font-size: 2rem; font-weight: bold;}
+	.internal.main .right.modules{float: right;}
+	.internal.main .left.modules{float: left;}
+	.internal.main .right.modules #twitter{margin-left: 0;}
+	.internal.main .pagetitle{padding: 0; margin-left: 2em; margin-right: 2em; margin-bottom: 1em; width: 100%; position: relative}
+	.internal.main .pagetitle h2{font-size: 2.5rem; font-weight: bolder; color: #006691}
+	.internal.main .pagetitle .socialmedias{position: absolute; right: 0; text-align: right; margin-right: 0px; color: #89888C; font-size: 1.5rem; padding-top: 0.5em;}
+	.internal.main .pagetitle .socialmedias .links{float: right; margin-left: 1em}
+	.internal.main .pagetitle .socialmedias i{color: #B1C42E; margin-left: 0.5em; margin-right: 0.25em}
+	.internal.main .staffs{padding-left: 1em; padding-right: 1em;}
+	.internal.main .staffs a{color: #7898AD}
+	.internal.main .contact form{border: none;}
+	.internal.main .contact form input{margin-top: 0.5em; margin-bottom: 0.5em;}
+	.internal.main .contact form textarea{margin-top: 0.5em; margin-bottom: 0.5em; resize: none;}
+	.internal.main .contact.right.modules{margin-left: 5em;}
+	.internal.main .contact.right.modules ul li.title{font-size: 1.25rem; font-weight: bold; color: #00467F}
+	
+	/** NEWS MAIN PAGE **/
+	.internal.main .news article.home-view{float: left; padding-left: 0; margin: 0.5em 1em; border-bottom: 1px solid #89888C;}
+	.internal.main .news article.home-view a{float: left;}
+	.internal.main .news article.home-view a.featured-image.link{height: 100%;}
+	.internal.main .news article.home-view a img{width: 100%; float: left;}
+	.internal.main .news article.home-view small{float: left; margin-left: 0; margin-top: 0.5em; color: #27628E; width: 100%;}
+	.internal.main .news article.home-view small a{color: #1e4d6f}
+	.internal.main .news article.home-view a.title{font-size: 1.345rem; color: #27628E; font-weight: bold; width: 100%; margin-left: 0;}
+	.internal.main .news article.home-view a.excerpt{float: left; width: 100%; margin-left: 0; margin-top: 0.25em;}
+	
+	/** ARTICLE VIEWING PAGE**/
+	.internal.main .article-view{float: left;}
+	.internal.main .pagetitle .author{float: left; width: 100%; font-weight: bold;}
+	.internal.main .pagetitle .author a{color: #1e4d6f;}
+	.internal.main .article-view img{width: 100%;}
+	.internal.main .article-view .content{text-align: justify; margin-top: 1em;}
+	.internal.main .article-view .share{margin-top: 1em;}
+	.internal.main .article-view .share div{float: left; margin: 0 0.5em;}
+	
+	/** WIDGETS STYLES **/
+	/** STAFF LIST **/
+	.authors{float:left; padding: 0; margin-top: 1em}
+	.authors ul{float: left; width: 100%; display: block}
+	.authors ul li{float: left; width: 100%; margin: 0.5em 0; display: cell; background-image: url("../imgs/colunistas_bg.jpg"); background-size: cover; background-position: top center; background-repeat: no-repeat;}
+	.authors ul li a img{width: 25%; height: 100%; float: right;}
+	.authors ul li span{width: 75%; text-align: left; float: left; padding: 1.5em 0.5em 1em 0.5em; font-size: 1.55rem;}
+	.authors ul li a span{color: #FFF;}
+	
+	/** YOUTUBE PLAYER **/
+	.featured-video{float: left;}
+	.featured-video h2{font-size: 3.542rem; font-weight: bolder; color: #809EC3;}
+	.featured-video iframe{padding: 0.75em; background-color: #5987AD; margin-top: 0.5em; width: 100%;}
+	
+	/** FACEBOOK **/
+	#facebook{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: right;}
+	
+	/** TWITTER **/
+	#twitter{padding: 0.75em; background-color: #5987AD; margin-left: 1em; margin-top: 1em; float: left;}
+	
+	/** BESTREADEDS **/
+	.mostReaded{background-color: #F1F8FD; float: left; padding-bottom: 0.5em;}
+	.mostReaded h2{color: #006691; font-weight: bold; padding-top: 0.5em; margin-left: 0.5em;}
+	.mostReaded article{margin-top: 1em; margin-bottom: 1em; float: left;}
+	.mostReaded article small, #mid .mostReaded article small a{float: left; width: 100; color: #1e4d6f;}
+	.mostReaded article a.excerpt{float: left; width: 100%; padding-bottom: 0.15em; border-bottom: 1px solid #888}
+	.mostReaded a.more{margin: 0.5em auto; float: left; width: 100%; text-align: center;}
+	
+	/** NEWSLETTER **/
+	.newsletter{float: left; padding: 0;}
+	.newsletter form input, #mid .newsletter form button{float: left; width: 50%;}
+	
+	/** FOOTER STYLES **/
+	footer{width: 100%; background-image: url('../imgs/footer-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: top center; margin-left: 0!important; margin-right: 0!important}
+	footer #logoFooter{padding-top: 10em; padding-bottom: 5em;  margin-left: 15em; float: left; width: 8em;}
+	footer #logoFooter img{width: 100%;}
+	footer #sitemap{float: left; margin-left: 3em; margin-top: 5em;}
+	footer #sitemap ul li:first-child{color: #FFFFFF; font-weight: bold; font-size: 1.350rem;}
+	footer #sitemap ul li:not(:first-child){list-style-type: disc; color: #FFFFFF; margin: 0.25em 0;}
+	footer #sitemap ul li a{color: #FFFFFF}
+	footer #band{float: left; width: 100%; padding: 1.5em 0; text-align: center}
+	footer #band img{width: 18%;}
+	footer .socialmedias{margin-left: auto; margin-right: auto; margin-top: 2.5em; font-size: 2rem; text-align: center;}
+	footer .socialmedias a{margin: 0 0.25em; color: #FFFFFF;}
+	footer .adbutton{margin-top: 2em; text-align: center}
+	footer #slogan{width: 100%; text-align: center; float: left; margin-top: 2em; color: #FFFFFF; font-weight: bold; font-size: 1.25em}
+	footer #copyright{float: left; width: 100%; padding: 1.5em 0; text-align: center; background-color: #23405F; background-size: cover; color: #FFFFFF; font-size: 0.75rem;}
+}
