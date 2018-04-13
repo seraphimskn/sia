@@ -11,3 +11,9 @@ if(isset($the_model->model) && $the_model->model !== null){
 }else{
     echo 'Houve um erro e o arquivo de dados não pode ser carregado. Entre em contato com o administrador do sistema.';
 }
+
+if(isset($data['medias']) && $data['medias'] != ''){
+    $smarty->assign('medias', $data['medias']);
+}else{
+    $smarty->assign('medias', 'Nenhuma m&iacute;dia foi configurada ainda.');
+}

@@ -38,9 +38,172 @@ if(isset($_SESSION) && isset($_SESSION['user_level'])) $smarty->assign('userLeve
 
 //get the breadcrumbs
 if($router->getActions() === null){
-    $data['breadcrumb'] = '<a href="#">Painel de Controle</a> > ';
+    $data['breadcrumb'] = '<a href="home">Painel de Controle</a> > Estat&iacute;sticas';
 }else{
-    $data['breadcrumb'] = '';
+    
+    $actions = $router->getActions();
+   
+    if(count($actions) <= 1){
+        foreach($actions as $action){
+            switch ($action){
+                case 'home':
+                    $data['breadcrumb'] = 'Painel de Controle > Estat&iacute;sticas';
+                    break;
+                case 'posts':
+                    $data['breadcrumb'] = 'Postagens > Vis&atilde;o Geral';
+                    break;
+                case 'extensions':
+                    $data['breadcrumb'] = 'Extens&otilde;es > Vis&atilde;o Geral';
+                    break;
+                case 'medias':
+                    $data['breadcrumb'] = 'M&iacute;dias > Vis&atilde;o Geral';
+                    break;
+                case 'users':
+                    $data['breadcrumb'] = 'Usu&aacute;rios > Vis&atilde;o Geral';
+                    break;
+                case 'system':
+                    $data['breadcrumb'] = 'Sistema > Configura&ccedil;&otilde;es Gerais';
+                    break;
+                case 'pages':
+                    $data['breadcrumb'] = 'P&aacute;ginas > Configura&ccedil;&otilde;es Gerais';
+                    break;
+                case 'reports':
+                    $data['breadcrumb'] = 'Relat&oacute;rios > Gerar Relat&oacute;rio';
+                    break;
+            }
+        }
+    }elseif(count($actions) > 1){
+        
+        $the_page = $actions[0];
+        $the_action = $actions[1];
+        
+        if(count($the_page) <= 1){
+            switch ($the_page){
+                case 'post':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Postagens > Nova Postagem';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Postagens > Editar Postagem';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Postagens > Deletar Postagem';
+                    }
+                    break;
+                case 'extension':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Extens&otilde;es > Nova Extens&atilde;o';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Extens&otilde;es > Editar Extens&atilde;o';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Extens&otilde;es > Deletar Extens&atilde;o';
+                    }
+                    break;
+                case 'media':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'M&iacute;dias > Nova M&iacute;dia';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'M&iacute;dias > Editar M&iacute;dia';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'M&iacute;dias > Deletar M&iacute;dia';
+                    }
+                    break;
+                case 'user':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Usu&aacute;rios > Novo Usu&aacute;rio';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Usu&aacute;rios > Editar Usu&aacute;rio';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Usu&aacute;rios > Deletar Usu&aacute;rio';
+                    }
+                    break;
+                case 'config':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Configura&ccedil;&otilde;es > Novo Par&acirc;metro';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Configura&ccedil;&otilde;es > Editar Par&acirc;metro';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Configura&ccedil;&otilde;es > Deletar Par&acirc;metro';
+                    }
+                    break;
+                case 'page':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'P&aacute;ginas > Nova P&aacute;gina';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'P&aacute;ginas > Editar P&aacute;gina';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'P&aacute;ginas > Deletar P&aacute;gina';
+                    }
+                    break;
+                case 'report':
+                    $data['breadcrumb'] = 'Relat&oacute;rios > Gerar Relat&oacute;rio';
+                    break;
+            }
+        }else{
+            
+            $the_action = $the_page[1];
+            $the_page = $the_page[0];
+            
+            switch ($the_page){
+                case 'post':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Postagens > Nova Postagem';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Postagens > Editar Postagem';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Postagens > Deletar Postagem';
+                    }
+                    break;
+                case 'extension':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Extens&otilde;es > Nova Extens&atilde;o';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Extens&otilde;es > Editar Extens&atilde;o';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Extens&otilde;es > Deletar Extens&atilde;o';
+                    }
+                    break;
+                case 'media':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'M&iacute;dias > Nova M&iacute;dia';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'M&iacute;dias > Editar M&iacute;dia';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'M&iacute;dias > Deletar M&iacute;dia';
+                    }
+                    break;
+                case 'user':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Usu&aacute;rios > Novo Usu&aacute;rio';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Usu&aacute;rios > Editar Usu&aacute;rio';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Usu&aacute;rios > Deletar Usu&aacute;rio';
+                    }
+                    break;
+                case 'config':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'Configura&ccedil;&otilde;es > Novo Par&acirc;metro';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'Configura&ccedil;&otilde;es > Editar Par&acirc;metro';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'Configura&ccedil;&otilde;es > Deletar Par&acirc;metro';
+                    }
+                    break;
+                case 'page':
+                    if($the_action == 'add'){
+                        $data['breadcrumb'] = 'P&aacute;ginas > Nova P&aacute;gina';
+                    }elseif($the_action == 'update'){
+                        $data['breadcrumb'] = 'P&aacute;ginas > Editar P&aacute;gina';
+                    }elseif($the_action == 'del'){
+                        $data['breadcrumb'] = 'P&aacute;ginas > Deletar P&aacute;gina';
+                    }
+                    break;
+                case 'report':
+                    $data['breadcrumb'] = 'Relat&oacute;rios > Gerar Relat&oacute;rio';
+                    break;
+            }
+        }
+    }
+   
 }
 
 //assign the breadcrumbs to the TPL vars

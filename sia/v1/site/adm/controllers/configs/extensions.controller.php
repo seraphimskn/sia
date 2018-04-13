@@ -4,10 +4,19 @@
 if(!isset($config_vars)){
     die("Acesso negado.");
 }
-    
+
+//initialize $data
+$data = array();
+
 //model archive inclusion
-if(isset($the_model->model) && $the_model->model !== null){
+if($the_model->error == 0){
     include_once '../adm/'.$the_model->model;
 }else{
     echo 'Houve um erro e o arquivo de dados não pode ser carregado. Entre em contato com o administrador do sistema.';
+}
+
+if(isset($data['extensions']) && $data['extensions'] != ''){
+    $smarty->assign('extensions', $data['extensions']);
+}else{
+    $smarty->assign('extensions', 'Nenhuma extens&atilde;o foi configurada ainda.');
 }

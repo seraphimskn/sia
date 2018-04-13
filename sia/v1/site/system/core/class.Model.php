@@ -81,7 +81,7 @@ class Model{
         
         }catch (PDOException $e){
             
-            $file = fopen('system/logs/add_error_log.txt', 'w+');
+            $file = fopen('../system/logs/add_error_log.txt', 'a+');
             
             fwrite($file, 'Error: Code: '.$e->getCode().' - Line '.$e->getLine().' - '.$e->getMessage().'.\r\n');
             
@@ -208,7 +208,7 @@ class Model{
                 
             } catch (PDOException $e) {
                 
-                $file = fopen('system/logs/select_error_log.txt', 'w+');
+                $file = fopen('../system/logs/select_error_log.txt', 'a+');
                 
                 fwrite($file, 'Error: Code: '.$e->getCode().' - Line '.$e->getLine().' - '.$e->getMessage().'.\r\n');
                 
@@ -227,7 +227,7 @@ class Model{
                 
             } catch (PDOException $e) {
                 
-                $file = fopen('system/logs/select_error_log.txt', 'w+');
+                $file = fopen('../system/logs/select_error_log.txt', 'a+');
                 
                 fwrite($file, 'Error: Code: '.$e->getCode().' - Line '.$e->getLine().' - '.$e->getMessage().'.\r\n');
                 
@@ -278,7 +278,7 @@ class Model{
             
         }catch (PDOException $e){
             
-            $file = fopen('system/logs/update_error_log.txt', 'w+');
+            $file = fopen('../system/logs/update_error_log.txt', 'a+');
             
             fwrite($file, 'Error: Code: '.$e->getCode().' - Line '.$e->getLine().' - '.$e->getMessage().'.\r\n');
             
@@ -327,7 +327,7 @@ class Model{
             
         }catch (PDOException $e){
             
-            $file = fopen('system/logs/delete_error_log.txt', 'w+');
+            $file = fopen('../system/logs/delete_error_log.txt', 'a+');
             
             fwrite($file, 'Error: Code: '.$e->getCode().' - Line '.$e->getLine().' - '.$e->getMessage().'.\r\n');
             

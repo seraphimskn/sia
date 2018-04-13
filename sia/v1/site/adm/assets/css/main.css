@@ -6,6 +6,7 @@
 .row{margin-left: 0; margin-right: 0;}
 ul{list-style-type: none;}
 .grey{color: #808080!important;}
+.red{color: #bf0a00!important;}
 h5.title{margin-top: 1em;}
 
 /*DEFAULTS*/
@@ -63,6 +64,63 @@ div.post.list section.list{width: 75vw;}
 div.post.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
 div.post.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
 div.post.list section.list section.table div.tbody article.the_post{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*EXTENSIONS*/
+div.extensions.list{padding-left: 0;}
+div.extensions.list section.list{width: 75vw;}
+div.extensions.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.extensions.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.extensions.list section.list section.table div.tbody article.the_extension{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*MEDIAS*/
+div.medias.list{padding-left: 0;}
+div.medias.list section.list{width: 75vw;}
+div.medias.list section.list section.thumbs{width: 95%; margin: 0 auto; background-color: #d8d8d8; box-shadow: 0px 0px 15px 5px #bab6b6 inset; -moz-box-shadow: 0px 0px 15px 5px #bab6b6 inset; -webkit-box-shadow: 0px 0px 15px 5px #bab6b6 inset; -khtml-box-shadow: 0px 0px 15px 5px #bab6b6 inset; -moz-box-shadow: 0px 0px 15px 5px #bab6b6 inset;}
+div.medias.list section.list section.thumbs .thumbnail{height: 10em; overflow: hidden; text-align: center; margin: 1rem; transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; -khtml-transition: all .5s;}
+div.medias.list section.list section.thumbs .thumbnail img{width: 100%; transition: all 0.5s;}
+div.medias.list section.list section.thumbs .thumbnail form{display: none;}
+div.medias.list section.list section.thumbs .thumbnail:hover{opacity: 0.5;}
+div.medias.list section.list section.thumbs .thumbnail:hover > img{width: 115%;}
+
+/*USERS*/
+div.users.list{padding-left: 0;}
+div.users.list section.list{width: 75vw;}
+div.users.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.users.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.users.list section.list section.table div.tbody article.the_user{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*CONFIGS*/
+div.configs.list{padding-left: 0;}
+div.configs.list section.list{width: 75vw;}
+div.configs.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.configs.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.configs.list section.list section.table div.tbody article.the_config{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*FORMS*/
+form.row section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row section.post-body{margin-top: 2em;}
+form.row section.right{margin-left: 4em;}
+form.row section.controls{margin-top: 2em;}
+form.row section.controls span{margin-top: 1em;}
+form.row section.post-type{margin-top: 0; min-height: 4em; margin-bottom: 1em; margin-top: 1em;}
+form.row section.post-type div.the_types{padding: 0.5em; border: solid 2px #b1b1b1; margin: 0.5em 0}
+form.row section.post-image div.image_preview{border: solid 2px #b1b1b1; margin: 0.5em 0; padding: 0.5em;}
+form.row section.bottom{width: 75vw; padding: 0.5em; margin-top: 1em;}
+form.row section.bottom section.seo h4, form.row section.bottom section.extensions h4{float: left; width: 100%;}
+form.row section.bottom section.extensions div.controls label{float: left; width: 100%;}
+
+/*CONFIGS FORMS*/
+form.row.the_configs section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row.the_configs section.post-body{margin-top: 2em; width: 75vw; padding: 1em;}
+form.row.the_configs section.right{margin-left: 0;}
+form.row.the_configs section.the_controls{width: 75vw; padding: 1em;}
+form.row.the_configs section.the_controls .controls select{margin: 0.5em 0;}
+
+/*MEDIA FORMS*/
+form.row.the_medias section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row.the_medias section.media-body div.the_media div.the_preview{display: none; padding: 0.5em; border: solid 2px #b1b1b1;}
+form.row.the_medias section.media-body div.the_media label.the_browse{position: relative;}
+form.row.the_medias section.media-body div.the_media label.the_browse input[type="file"]{display: none; position: absolute; left: 0; right: 0;}
 
 /*FOOTER*/
 footer.internal{float: left; width: 75vw; margin-top: 1.5em; margin-bottom: 2em; padding-top: 1em; padding-bottom: 1em; background-color: #FFFFFF; font-size: 0.825rem;}

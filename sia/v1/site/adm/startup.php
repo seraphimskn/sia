@@ -100,12 +100,17 @@ if(!isset($_SESSION['logged'])){
                     $the_controller = (object)$controller->getController('posts/posts');
                     $the_model = (object)$model->getModel('posts/posts');
                     break;
+                case 'pages':
+                    $the_body = $smarty->getTemplateDir('default').'pages/pages.tpl';
+                    $the_controller = (object)$controller->getController('pages/pages');
+                    $the_model = (object)$model->getModel('pages/pages');
+                    break;
                 case 'extensions':
                     $the_body = $smarty->getTemplateDir('default').'configs/extensions.tpl';
                     $the_controller = (object)$controller->getController('configs/extensions');
                     $the_model = (object)$model->getModel('configs/extensions');
                     break;
-                case 'media':
+                case 'medias':
                     $the_body = $smarty->getTemplateDir('default').'media/medias.tpl';
                     $the_controller = (object)$controller->getController('media/medias');
                     $the_model = (object)$model->getModel('media/medias');
@@ -122,9 +127,61 @@ if(!isset($_SESSION['logged'])){
                     break;
             }
         }
+    }elseif(is_array($actions) && count($actions) > 1){
+        
+        $the_page = $actions[0];
+        $the_action = $actions[1];
+        if(count($the_page) <= 1){
+            switch ($the_page){
+                case 'config':
+                case 'extension':
+                case 'user':
+                    $the_folder = 'configs/';
+                    break;
+                case 'reports':
+                    $the_folder = 'commons/';
+                    break;
+                case 'media':
+                    $the_folder = 'media/';
+                    break;
+                case 'page':
+                    $the_folder = 'pages/';
+                    break;
+                case 'post':
+                    $the_folder = 'posts/';
+                    break;
+            }
+        }else{
+            switch($the_page[0]){
+                case 'config':
+                case 'extension':
+                case 'user':
+                    $the_folder = 'configs/';
+                    $the_page = $the_page[0];
+                    break;
+                case 'reports':
+                    $the_folder = 'commons/';
+                    $the_page = $the_page[0];
+                    break;
+                case 'media':
+                    $the_folder = 'media/';
+                    $the_page = $the_page[0];
+                    break;
+                case 'page':
+                    $the_folder = 'pages/';
+                    $the_page = $the_page[0];
+                    break;
+                case 'post':
+                    $the_folder = 'posts/';
+                    $the_page = $the_page[0];
+                    break;
+            }
+        }
+        
+        $the_body = $smarty->getTemplateDir('default').$the_folder.$the_page.'.tpl';
+        $the_controller = (object)$controller->getController($the_folder.$the_page);
+        $the_model = (object)$model->getModel($the_folder.$the_page);
         
     }
-
 }
-
 

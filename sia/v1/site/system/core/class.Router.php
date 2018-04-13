@@ -25,7 +25,12 @@ class Router{
         
         if(isset($central)){
             foreach($central as $key => $value){
-               $params[] = $value;
+                if(!preg_match('/[\/]+/', $value)){
+                    $params[] = $value;
+                }else{
+                    $value = explode('/', $value);
+                    $params[] = $value;
+                }
             }
             if(isset($params)){
                 $this->actions = $params;

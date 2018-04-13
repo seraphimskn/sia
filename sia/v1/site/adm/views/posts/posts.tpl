@@ -8,7 +8,7 @@
 					<label for="checkall" class="form-check-label">Marcar Todos</label>
 				</div>
 				<div class="float-left">
-					<a href="#" class="btn btn-primary btn-sm" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Adicionar Novo</a>
+					<a href="post/add" class="btn btn-primary btn-sm" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Adicionar Novo</a>
 					<a href="#" class="btn btn-secondary btn-sm" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Tornar Rascunho</a>
 					<a href="#" class="btn btn-danger btn-sm" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Apagar</a>
 				</div>
@@ -23,7 +23,8 @@
     	<section class="table col-12 float-left">
     		<div class="thead col-12 float-left row">
     			<div class="empty col-1"></div>
-    			<div class="col-6"><h6>T&iacute;tulo</h6></div>
+    			<div class="col-4"><h6>T&iacute;tulo</h6></div>
+    			<div class="col-2"><h6>Tipo</h6></div>
     			<div class="col-2"><h6>Cliques</h6></div>
     			<div class="col-3"><h6>A&ccedil;&otilde;es</h6></div>
     		</div>
@@ -31,9 +32,10 @@
     			{foreach $posts as $post}
     				<article class="the_post row float-left col-12">
     					<div class="checkbox col-1"><form class="form-check-inline"><input type="checkbox" name="check[]" value="{$post->ID}" /></form></div>
-    					<div class="col-6">{$post->post_title}</div>
+    					<div class="col-4">{$post->post_title}</div>
+    					<div class="col-2">{$post->post_type}</div>
     					<div class="col-2">{$post->post_clicks}</div>
-    					<div class="col-3"><a href="#" class="btn btn-primary btn-sm" role="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a> <a href="#" class="btn btn-danger btn-sm" role="btn"><i class="fa fa-trash" aria-hidden="true"></i> Apagar</a></div>
+    					<div class="col-3"><a href="post/update/{$post->ID}" class="btn btn-primary btn-sm" role="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a> <a href="#" class="btn btn-danger btn-sm" role="btn"><i class="fa fa-trash" aria-hidden="true"></i> Apagar</a></div>
     				</article>
     			{/foreach}
     		</div>

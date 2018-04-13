@@ -25,19 +25,20 @@ section.dock.monthly-partial{ldelim}background-color:{$configs['primary-color']}
 		<ul>
 			<li><a href="home">PAINEL DE CONTROLE</a></li>
 			<li><a href="posts">PUBLICA&Ccedil;&Otilde;ES</a></li>
+			<li><a href="pages">P&Aacute;GINAS</a></li>
 			<li><a href="extensions">EXTENS&Otilde;ES</a></li>
-			<li><a href="media">M&Iacute;DIAS</a></li>
+			<li><a href="medias">M&Iacute;DIAS</a></li>
 			<li><a href="users">USU&Aacute;RIOS</a></li>
 			<li><a href="system">SISTEMA</a></li>
 			<li><a href="reports">RELAT&Oacute;RIO</a></li>
 		</ul>
 	</nav>
 	<div class="col-12 float-left top">
-		<h5 class="breadcrumbs col-3 float-left"><i class="fa fa-bars" aria-hidden="true"></i>{$breadcrumb}</h5>
+		<h5 class="breadcrumbs col-4 float-left"><i class="fa fa-bars" aria-hidden="true"></i>{$breadcrumb}</h5>
 		<div class="col-4 float-right avatar">
 			<ul>
 				<li class="dropdown">
-					<a href="#">{$userData->user_name} <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+					<a href="#" id="viewing">{$userData->user_name} <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 					<ul class="hidden-menu col-12">
 						<li class="col-12"><a href="#">Editar Perfil</a></li>
 						<li class="col-12 quit"><a href="?quit=true">Sair</a></li>
