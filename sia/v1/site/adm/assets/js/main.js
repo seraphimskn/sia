@@ -27,7 +27,7 @@ $(document).ready(function(){
 		plugins: [
 		    "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak",
 		    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-		    "table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker textpattern"
+		    "table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern"
 		  ],
 		toolbar1: "bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
 		toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | forecolor backcolor",
@@ -36,9 +36,13 @@ $(document).ready(function(){
 		branding: false
 	});
 	
+	$('#edit_url').on('click', function(){
+		
+	});
+	
 	$('#new_type').on('click', function(){
 	
-		var addPostTypeDocker = '<div class="dock position-absolute new_post_type" style="z-index: 9; left: 0; bottom: -25%; box-shadow: 5px 10px 15px #666666"><form name="new_post_type" class="form-control" id="new_post_type"><div class="form-control input-group mb-3"><input type="text" name="option_name" class="form-control" placeholder="Tipo de Post"><input type="hidden" name="option_type" value="post_type" /><button class="btn btn-primary" id="add_post_type"><i class="fa fa-plus" aria-hidden="true"></i></div><input type="hidden" value="true" name="secure"></form></div>';
+		var addPostTypeDocker = '<div class="dock position-absolute new_post_type" style="z-index: 9; left: 0; bottom: -25%; box-shadow: 5px 10px 15px #666666"><form class="form-control" id="new_post_type"><div class="form-control input-group mb-3"><input type="text" name="option_name" class="form-control" placeholder="Tipo de Post"><button class="btn btn-primary" id="add_post_type"><i class="fa fa-plus" aria-hidden="true"></i></div><input type="hidden" value="true" name="secure"><input type="hidden" name="new_type" value="true"><input type="hidden" name="for" value="'+$('form.row').attr('name')+'"><input type="hidden" name="userID" value="'+$(this).attr('data-session')+'"></form></div>';
 		
 		$(this).after(addPostTypeDocker).fadeIn();
 		
@@ -46,7 +50,7 @@ $(document).ready(function(){
 		
 		addNewType.on('click', function(){
 			var form = $('body').find('form#new_post_type');
-			ajaxSend('configs', 'config', form.serialize(), 'the_types');
+			ajaxSend('configs', 'config', form.serializeArray());
 			return false;
 		});
 		

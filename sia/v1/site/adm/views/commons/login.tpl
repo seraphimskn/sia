@@ -1,6 +1,6 @@
 <div id="loginForm" class="row">
 	<div class="col-12 main-logo">
-		<img src="../{$configs['logo']}" class="img-fluid">
+		<img src="{$configs['logo']}" class="img-fluid">
 	</div>	
 	<div class="col-3 form dock">
 		{if isset($data['error'])}

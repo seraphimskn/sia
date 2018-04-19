@@ -20,7 +20,7 @@ section.dock.monthly-partial{ldelim}background-color:{$configs['primary-color']}
 <header>
 {if true eq $sessionLogged}
 	<nav class="vertical-nav">
-		<h2 class="site-title">{$configs['site-title']}</h2>
+		<h2 class="site-title"><img src="{$configs['logo']}" alt="{$configs['site-title']}" title="{$configs['site-title']}" /></h2>
 		<div class="col-12 bar"></div>
 		<ul>
 			<li><a href="home">PAINEL DE CONTROLE</a></li>

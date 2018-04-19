@@ -1,4 +1,7 @@
 <form name="add_media" method="post" enctype="multipart/form-data" action="" class="row the_medias">
+{if isset($msg)}
+	{$msg}
+{/if}
 <section class="top-row col-12 row first">
 	<h2>Adicionar M&iacute;dias</h2>
 </section>
@@ -7,7 +10,7 @@
 		<div class="the_preview col-12"></div>
 		<label class="col the_browse">
 			<span class="btn btn-secondary">
-				Browse <input type="file" name="media[]">
+				Browse <input type="file" name="media">
 			</span>
 		</label>
 		<div class="the_buttons col-2">

@@ -25,7 +25,7 @@ if(true === $scripts->error){
 }
 
 //set the base href
-$smarty->assign('baseHREF', '/bandnews/site/adm/');
+$smarty->assign('baseHREF', '/hangar/site/adm/');
 
 //sets the database primary configs
 $smarty->assign('configs', $data['configs']);

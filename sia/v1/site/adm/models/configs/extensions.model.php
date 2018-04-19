@@ -8,7 +8,7 @@ if(!isset($config_vars)){
 //initalizes the $data
 $data = array();
 
-$the_extensions = (object)$model->select($config_vars->tablePrefix.'options', array('option_type' =>'extension'), 'created_on', 'DESC');
+$the_extensions = (object)$model->select($config_vars->tablePrefix.'extensions', null, 'created_on', 'DESC');
 
 if(count($the_extensions) >= 1){
     foreach($the_extensions as $extension){

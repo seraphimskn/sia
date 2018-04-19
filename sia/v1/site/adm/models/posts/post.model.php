@@ -9,7 +9,7 @@ if(!isset($config_vars)){
 $data = array();
 
 //select the post types
-$post_categories = (object)$model->select($config_vars->tablePrefix.'options', array('option_type'=>'post_type')); 
+$post_categories = (object)$model->select($config_vars->tablePrefix.'options', array('option_for'=>'post_type')); 
 
 if(count($post_categories) >= 1){
     if(is_array($post_categories)){

@@ -20,7 +20,7 @@
     	{if is_array($medias)}
     		{foreach $medias as $media}
     		<article class="media thumbnail col-2" data-id="{$media->ID}">
-    			<img src="../{$media->media_url}" title="{$media->media_title}" class="the_thumb">
+    			<img src="{$media->media_url}" title="{$media->media_title}" class="the_thumb">
     			<form name="select_media" method="post" action="" enctype="multipart/form-data">
     				<input type="checkbox" name="the_media[]" value="{$media->ID}" >
     			</form>

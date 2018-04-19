@@ -23,7 +23,8 @@
     	<section class="table col-12 float-left">
     		<div class="thead col-12 float-left row">
     			<div class="empty col-1"></div>
-    			<div class="col-8"><h6>T&iacute;tulo</h6></div>
+    			<div class="col-5"><h6>T&iacute;tulo</h6></div>
+    			<div class="col-3"><h6>Tipo</h6></div>
     			<div class="col-3"><h6>A&ccedil;&otilde;es</h6></div>
     		</div>
     		<div class="tbody col-12 row">
@@ -31,7 +32,8 @@
     			{foreach $extensions as $extension}
     				<article class="the_extension row float-left col-12">
     					<div class="checkbox col-1"><form class="form-check-inline"><input type="checkbox" name="check[]" value="{$extension->ID}" /></form></div>
-    					<div class="col-8">{$extension->option_name}</div>
+    					<div class="col-5">{$extension->extension_name}</div>
+    					<div class="col-3">{$extension->extension_type}</div>
     					<div class="col-3"><a href="extension/update/{$extension->ID}" class="btn btn-primary btn-sm" role="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a> <a href="#" class="btn btn-danger btn-sm" role="btn"><i class="fa fa-trash" aria-hidden="true"></i> Apagar</a></div>
     				</article>
     			{/foreach}

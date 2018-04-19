@@ -28,6 +28,7 @@
     			<div class="col-3"><h6>A&ccedil;&otilde;es</h6></div>
     		</div>
     		<div class="tbody col-12 row">
+    		{if isset($pages)}
     			{foreach $pages as $page}
     				<article class="the_post row float-left col-12">
     					<div class="checkbox col-1"><form class="form-check-inline"><input type="checkbox" name="check[]" value="{$page->ID}" /></form></div>
@@ -36,6 +37,10 @@
     					<div class="col-3"><a href="page/update/{$page->ID}" class="btn btn-primary btn-sm" role="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a> <a href="#" class="btn btn-danger btn-sm" role="btn"><i class="fa fa-trash" aria-hidden="true"></i> Apagar</a></div>
     				</article>
     			{/foreach}
+    		
+    		{else}
+    			<span>Nenhuma p&aacute;gina foi configurada ainda!</span>
+    		{/if}
     		</div>
     	</section>
 	</section>

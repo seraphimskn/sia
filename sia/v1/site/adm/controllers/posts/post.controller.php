@@ -20,9 +20,6 @@ $smarty->assign('ajax', $load->getScript('ajax'));
 $load->setScript($config_vars->scripts_path.'/tinymce', 'tinymce.min', 'tinyMCE');
 $smarty->assign('tinyMCE', $load->getScript('tinyMCE'));
 
-//get the action to do
-$actions = $router->getActions();
-
 foreach($actions as $action){
     if(is_array($action)){
         if($action == 'update'){

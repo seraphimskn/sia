@@ -21,7 +21,8 @@ div.top div.avatar ul.hidden-menu li{float: left;}
 div.top div.avatar ul.hidden-menu li.quit a{color: #900;}
 div.welcome{background-color: rgba(255, 255, 255, 0.95); padding-top: 0.6em; padding-bottom: 0.55em; padding-left: 22vw; font-weight: bold; border-bottom: solid 2px #c4c4c4}
 nav.vertical-nav{float: left; position: fixed; left: 0; top: 0; height: 100vh; z-index: 10;}
-nav.vertical-nav h2.site-title{padding: 1em 0.5em 0 0.5em; text-transform: uppercase}
+nav.vertical-nav h2.site-title{padding: 1em 0; text-transform: uppercase; text-align: center;}
+nav.vertical-nav h2.site-title img{max-height: 120px;}
 nav.vertical-nav .bar{float: left; background-color: rgba(0, 0, 0, 0.25); height: 2.9em; margin: 1.5em 0 5em 0;}
 nav.vertical-nav ul{padding: 0 2.5em;}
 nav.vertical-nav ul li{margin: 2em 0;}
@@ -54,7 +55,8 @@ section.dock.posts a.btn{position: absolute; bottom: 1em; right: 1em;}
 
 /*LOGIN*/
 #loginForm .msg{margin: 5vh auto;}
-#loginForm .main-logo{margin: 20vh auto 1vh auto; text-align: center; padding: 0!important;}
+#loginForm .main-logo{margin: 20vh auto 1vh auto; text-align: center; padding: 0!important; max-height: 150px;}
+#loginForm .main-logo img{max-height: 150px;}
 #loginForm .form.dock{margin: 2vh auto}
 #loginForm .form.dock input:not([type="checkbox"]){margin: 2em 0;}
 
@@ -97,7 +99,10 @@ div.configs.list section.list section.table div.thead div:not(:first-child){bord
 div.configs.list section.list section.table div.tbody article.the_config{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
 
 /*FORMS*/
+form.row div.alert{margin-top: 1em; text-align: center; width: 75vw;}
 form.row section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row section.top-row span{margin-top: 0.5em;}
+form.row section.top-row span input{margin-left: 0.5em; margin-right: 0.5em;}
 form.row section.post-body{margin-top: 2em;}
 form.row section.right{margin-left: 4em;}
 form.row section.controls{margin-top: 2em;}
