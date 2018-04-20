@@ -1,0 +1,23 @@
+/** FONTS IMPORT **/
+@import url('font-awesome.css');
+@import url('nexa.css');
+
+/** DEFAULTS AND RESETS **/
+*{margin: 0; padding: 0}
+ul, li{list-style-type: none}
+body{overflow-x: hidden;}
+.main{margin: 0; padding: 0;}
+header{background-color: #FFFFFF;}
+.row{padding: 0; margin-left: 0; margin-right: 0;}
+.nav{margin-left: auto; margin-right: auto;}
+.nav .col{text-align: center;}
+.nav a{padding-top: 2em; font-size: 150%; font-family: nexa; text-transform: uppercase;}
+.nav a:hover{color: #7e22e4}
+.nav ul li span{margin: 0; padding: 0;}
+
+/** SLIDESHOW SECTION **/
+section.slideshow{width: 100%;}
+section.slideshow img{width: 100%;}
+
+/** INNER PAGES **/
+section.page h1{font-size: 350%; font-weight: bolder}

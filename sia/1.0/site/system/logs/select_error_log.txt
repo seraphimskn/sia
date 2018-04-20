@@ -1,0 +1,2 @@
+Error: Code: 42S22 - Line 225 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'published' in 'where clause'
+Error: Code: 42S22 - Line 225 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'published' in 'where clause'
