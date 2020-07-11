@@ -1,34 +1,27 @@
 <?php
 
-//secure the system
+//secure check
 if(!isset($config_vars)){
-    die('Acesso negado.');
+    die("Acesso negado.");
 }
 
-//includes the common data model
-if($body_model->error == 0){
-    include_once $body_model->model;
+//loads the hmtl5 canvas controler
+$load->setScript($config_vars->scripts_path, 'kinetic-v5.1.0.min', 'kineticJS');
+$smarty->assign('kinetic', $load->getScript('kineticJS'));
+
+//model archive inclusion
+if(isset($the_model->model) && $the_model->model !== null){
+    include_once '../adm/'.$the_model->model;
 }else{
-    echo 'Houve um erro! O modelador de dados n&atilde;o existe ou n&atilde;o p&ocirc;de ser carregado, contate o administrador do sistema!';
+    echo 'Houve um erro e o arquivo de dados não pode ser carregado. Entre em contato com o administrador do sistema.';
 }
 
-//retrieves the modules
-if(isset($data['home']['extensions'])){
-    $extensions = $data['home']['extensions'];
-    
-    foreach($extensions as $extension){
-        $the_modules = $module->getModule($extension->module, $extension->id);
-    }
-    
-    if(isset($the_modules->error) && $the_modules->error == true){
-        echo $the_modules->msg;
-    }else{
-        $smarty->assign('module', $the_modules->module_path);
-        
-        include_once $the_modules->controller->controller;
-        
-    }
+//lookup to the metrics
+if(isset($data['metrics']) && $data['metrics'] > 0){
+    $smarty->assign('metrics', $data['metrics']);
 }
 
-//sets the template vars
-$smarty->assign('home', (object)$data['home']);
+//assign the posts snippets
+if(isset($data['posts']) && $data['posts'] > 0){
+    $smarty->assign('posts', $data['posts']);
+}

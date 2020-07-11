@@ -10,37 +10,32 @@ include_once 'system/core/class.Modules.php';
 #including the Smarty template compiler to the system
 include_once 'system/smarty/libs/Autoloader.php';
 
-#including the PHPMailer class
-include_once 'system/libs/PHPMailer-master/PHPMailerAutoload.php';
-
-#including the startup file of the system
+#include the startup to the system
 include_once 'startup.php';
 
 #starts the application rendering
 #the headers
-if ($common_controller->error == 0){
+//inserts the controller
+
+if($common_controller->error == 0){
     include_once $common_controller->controller;
 }else{
     echo 'Houve um erro! O controlador n&atilde;o existe ou n&atilde;o p&ocirc;de ser carregado, contate o administrador do sistema!';
 }
+
 $smarty->display($header);
 
 #the main content of the application
-if($body_controller->error == 0){
-    include_once $body_controller->controller;
+if($the_controller->error == 0){
+    include_once $the_controller->controller;
 }else{
     echo 'Houve um erro! O controlador n&atilde;o existe ou n&atilde;o p&ocirc;de ser carregado, contate o administrador do sistema!';
 }
 
-#the controller of pages for the one page site
-if($one_page_controller->error == 0){
-    include_once $one_page_controller->controller;
-}else{
-    echo 'Houve um erro! O controlador n&atilde;o existe ou n&atilde;o p&ocirc;de ser carregado, contate o administrador do sistema!';
-}
-
-$smarty->display($body);
+$smarty->display($the_body);
 
 #the footers
 $smarty->display($footer);
+
+
 

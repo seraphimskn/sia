@@ -7,7 +7,6 @@ $model      = new Model();           //setup the Model() object
 $module     = new Modules();         //setup the Modules() object
 Smarty_Autoloader::register();       //starts the Smarty compiler
 $smarty     = new Smarty();          //setup the Smarty() object
-$mail       = new PHPMailer;         //setup the mailer object
 
 //if isn't on the developing ambience, set to false 
 $smarty->debugging = false;
@@ -27,10 +26,10 @@ $smarty->configLoad('system/defines/config.conf', 'constants'); #constants
 //set the config vars to a callable var
 $config_vars = (object)$smarty->getConfigVars();
 
+
 //set the initial scripts
 $load->setScript($config_vars->scripts_path, 'jquery-3.3.1.min');
 $load->setScript($config_vars->scripts_path, 'jquery-ui.min');
-$load->setScript($config_vars->scripts_path, 'owl.carousel');
 $load->setScript($config_vars->scripts_path.'/bootstrap', 'bootstrap.bundle.min');
 $load->setScript($config_vars->scripts_path.'/bootstrap', 'bootstrap.min');
 $load->setScript($config_vars->scripts_path, 'main');
@@ -74,7 +73,3 @@ $actions = $router->getActions();
 $body_controller = (object)$controller->getController('commons/home');
 $body_model = (object)$model->getModel('commons/home');
 $body = $smarty->getTemplateDir('default').'commons/home.tpl';
-
-//one page controller
-$one_page_controller = (object)$controller->getController('contents/pages');
-$one_page_model = (object)$model->getModel('contents/pages');

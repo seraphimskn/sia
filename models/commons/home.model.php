@@ -1,56 +1,29 @@
 <?php 
 
-//secure the system
+//secure check
 if(!isset($config_vars)){
-    die('Acesso negado.');
+    die("Acesso negado.");
 }
 
-//initialize the $data holder
+//initalizes the $data
 $data = array();
 
-$the_home = (object)$model->select($config_vars->tablePrefix.'pages', array('page_slug'=>'home_page'));
+$statistics = $model->select($config_vars->tablePrefix.'metrics', null, 'updated_on', 'DESC');
 
-if(isset($the_home) && count($the_home) !== 0){
+if(count($statistics) > 0){
     
-    foreach($the_home as $home){
-        $data['home']['content'] = $home->page_value;
-        $the_options = (object)json_decode($home->page_options);
-    }
+}else{
     
-}
-
-if(isset($the_options)){
-    
-    foreach($the_options as $option => $value){
-        if($option == 'extensions'){
-            
-            //select the extensions
-            if(is_array($value)){
-                foreach($value as $extension_id){
-                    $the_extensions[] = (object)$model->select($config_vars->tablePrefix.'extensions', array('ID'=>$extension_id));
-                }
-            }else{
-                $the_extensions = (object)$model->select($config_vars->tablePrefix.'extensions', array('ID'=>$value));
-            }
-            
-            //distribute the extensions in an array
-            foreach($the_extensions as $extension){
-                if(is_array($extension)){
-                    
-                }else{
-                    if($extension->extension_type == 'banner' || $extension->extension_type == 'slideshow'){
-                        $extension_link[$extension->extension_type] = (object)array('module'=>'banner', 'id'=>$extension->ID);                         
-                    }else{
-                        $extension_link[$extension->extension_type] = (object)array('link'=>$extension->extension_type,'id'=>$extension->ID);
-                    }
-                }
-                $data['home']['extensions'] = (object)$extension_link;
-            }            
-        }else{
-            $data['home'][$option] = $value;
-        }
-    }
+    $data['metrics']['info'] = 'No metrics registered yet!';
     
 }
 
+$the_posts = $model->select($config_vars->tablePrefix.'posts', array('post_type' => 'post'), 'created_on', 'DESC LIMIT 9');
 
+if(count($the_posts) >= 1){
+    foreach($the_posts as $post){
+        $data['posts'][] = $post;
+    }
+}else{
+    $data['posts'] = '';
+}

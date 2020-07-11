@@ -56,7 +56,7 @@ class Load{
         
       $scripts = ""; 
         
-        if(isset($this->scripts) && count($this->scripts >= 1)){
+        if(isset($this->scripts) && count($this->scripts) >= 1){
             foreach($this->scripts as $script=>$link){
                $scripts .= $link;
                $error    = false;
@@ -84,7 +84,7 @@ class Load{
         
         $styles = "";
         
-        if(isset($this->styles) && count($this->styles >= 1)){
+        if(isset($this->styles) && count($this->styles) >= 1){
             foreach($this->styles as $style=>$href){
                 $styles  .= $href;
                 $error    = false;
@@ -112,7 +112,7 @@ class Load{
         
         $libs = "";
         
-        if(isset($this->libs) && count($this->libs >= 1)){
+        if(isset($this->libs) && count($this->libs) >= 1){
             foreach($this->libs as $lib=>$path){
                 $libs    .= $path;
                 $error    = false;

@@ -1,23 +1,18 @@
-<?php 
+<?php
 
-//secure the script
+//secure check
 if(!isset($config_vars)){
-    die('Acesso negado.');
+    die("Acesso negado.");
 }
 
-//initialize the $data[] param
 $data = array();
 
-//the general common configs to all the pages
-$the_configs = (object)$model->select($config_vars->tablePrefix.'configs');
+$the_configs = $model->select($config_vars->tablePrefix.'configs');
 
 foreach($the_configs as $config){
     $data['configs'][$config->config_name] = $config->config_value;
 }
 
-//retrieve the pages set
-$the_pages = (object)$model->select($config_vars->tablePrefix.'pages', array('published'=>1), null, 'ASC');
-
-foreach($the_pages as $page){
-    $data['pages'][$page->page_slug] = $page;
+if(isset($_SESSION['logged']) && $_SESSION['logged'] === true){
+    $user_stats = $model->select($config_vars->tablePrefix.'login', array('ID'=>$_SESSION['userID']));
 }
