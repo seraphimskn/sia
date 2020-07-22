@@ -25,16 +25,6 @@ if($common_controller->error == 0){
 
 $smarty->display($header);
 
-#the main content of the application
-if($the_controller->error == 0){
-    include_once $the_controller->controller;
-}else{
-    echo 'Houve um erro! O controlador n&atilde;o existe ou n&atilde;o p&ocirc;de ser carregado, contate o administrador do sistema!';
-}
-
-$smarty->display($the_body);
-
-#the footers
 $smarty->display($footer);
 
 

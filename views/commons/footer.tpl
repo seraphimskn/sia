@@ -1,5 +1,5 @@
-<footer {if true eq $sessionLogged}class="internal"{/if}>
-	<span>SIA - Sistema Integrado de Admnistra&ccedil;&otilde;o - desenvolvido por <a href="artcom.com.br">ARTCOM</a> - &copy; todos os direitos reservados 2018</span>
+<footer class="{if true eq $sessionLogged}internal{/if} row">
+	<div class="text-center col-12">Sistema de Gestão VIP - desenvolvido por <a href="http://www.ldsys.com.br">LDSys Soluções</a></div>
 </footer>
 </div>
 </body>

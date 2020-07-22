@@ -26,7 +26,6 @@ $smarty->configLoad('system/defines/config.conf', 'constants'); #constants
 //set the config vars to a callable var
 $config_vars = (object)$smarty->getConfigVars();
 
-
 //set the initial scripts
 $load->setScript($config_vars->scripts_path, 'jquery-3.3.1.min');
 $load->setScript($config_vars->scripts_path, 'jquery-ui.min');
@@ -70,6 +69,7 @@ $footer = $smarty->getTemplateDir('default').'commons/footer.tpl';
 $actions = $router->getActions();
 
 //the body
-$body_controller = (object)$controller->getController('commons/home');
-$body_model = (object)$model->getModel('commons/home');
-$body = $smarty->getTemplateDir('default').'commons/home.tpl';
+
+$action = $router->getActions();
+
+var_dump($action);
