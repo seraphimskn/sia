@@ -9,19 +9,20 @@ if(!isset($config_vars)){
 $data = array();
 
 //model archive inclusion
-if($the_model->error == 0){
-    include_once '../adm/'.$the_model->model;
+if($body_model->error == 0){
+    include_once $body_model->model;
 }else{
-    echo 'Houve um erro e o arquivo de dados não pode ser carregado. Entre em contato com o administrador do sistema.';
+    echo 'Houve um erro e o arquivo de dados n&atilde;o pode ser carregado. Entre em contato com o administrador do sistema.';
 }
 
 if(isset($data['user'])){
-    $_SESSION['userName'] = $data['user']->user_name;
-    $_SESSION['userID'] = $data['user']->ID;
+    $_SESSION['userName'] = $data['user']->name;
+    $_SESSION['userID'] = $data['user']->id;
     $_SESSION['userIP'] = $_SERVER['REMOTE_ADDR'];
-    $_SESSION['user_level'] = $data['user']->user_level;
+    $_SESSION['user_level'] = $data['user']->immunity;
     $_SESSION['logged'] = true;
     header('Location:  ./');
+    exit();
 }elseif(isset($data['error'])){
     $data['error'] = 'Login ou Senha incorretos. Por favor, tente novamente.';
 }

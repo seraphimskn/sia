@@ -1,8 +1,8 @@
 <div id="loginForm" class="row">
-	<div class="col-12 main-logo">
+	<div class="col-12 main-logo text-center">
 		<img src="{$configs['logo']}" class="img-fluid">
 	</div>	
-	<div class="col-3 form dock">
+	<div class="col-3 form dock mx-auto">
 		{if isset($data['error'])}
 			<div class="alert alert-danger msg">{$data['error']}</div>
 		{/if}

@@ -72,4 +72,25 @@ $actions = $router->getActions();
 
 $action = $router->getActions();
 
-var_dump($action);
+if(!isset($_SESSION['logged'])){
+    $body_controller = (object)$controller->getController('commons/login');
+    $body_model = (object)$model->getModel('commons/login');
+    $body = $smarty->getTemplateDir('default').'commons/login.tpl';
+}else
+if(is_null($actions) || $actions == 'home'){    
+    if(is_null($_SESSION['logged']) || $_SESSION['logged'] == false){
+        $body_controller = (object)$controller->getController('commons/login');
+        $body_model = (object)$model->getModel('commons/login');
+        $body = $smarty->getTemplateDir('default').'commons/login.tpl';
+    }else{
+        $body_controller = (object)$controller->getController('commons/home');
+        $body_model = (object)$model->getModel('commons/home');
+        $body = $smarty->getTemplateDir('default').'commons/home.tpl';
+    }
+}else{
+    if(count($action) == 1){
+        $body_controller = (object)$controller->getController($action.'/view');
+        $body_model = (object)$model->getModel($action.'/view');
+        $body = $smarty->getTemplateDir('default').$action.'/view.tpl';
+    }
+}
