@@ -1,0 +1,169 @@
+/*FA IMPORT*/
+@import url("font-awesome.css");
+
+/*CSS RESET*/
+*{margin: 0; padding: 0}
+.row{margin-left: 0; margin-right: 0;}
+ul{list-style-type: none;}
+.grey{color: #808080!important;}
+.red{color: #bf0a00!important;}
+h5.title{margin-top: 1em;}
+
+/*DEFAULTS*/
+th,td,h4,h5,.col,span{color:#00cc99}
+div.top{padding-left: 21vw; padding-top: 2em; padding-bottom: 1.85em; border-bottom: solid 2px #c4c4c4;background: linear-gradient(to right, #00cc99 0%, #006666 100%);}
+div.top .breadcrumbs, div.top .breadcrumbs a{color: #FFF}
+div.top .breadcrumbs i{margin-right: 0.5em;}
+div.top div.avatar{text-align: right; padding-right: 5em;}
+div.top div.avatar ul li.dropdown{position: relative;}
+div.top div.avatar ul.hidden-menu{position: absolute; opacity: 0; -moz-opacity: 0; -o-opacity: 0; -webkit-opacity: 0; z-index: 10; top: -300%; right: 0; transition: all 2s; -webkit-transition: all 1s; -o-transition: all 2s; -moz-transition: all 2s;}
+div.top div.avatar ul.hidden-menu.active{top: 100%; opacity: 1; -moz-opacity: 1; -o-opacity: 1; -webkit-opacity: 1;}
+div.top div.avatar ul.hidden-menu li{float: left;}
+div.top div.avatar ul.hidden-menu li.quit a{color: #900;}
+div.welcome{background-color: rgba(255, 255, 255, 0.95); padding-top: 0.6em; padding-bottom: 0.55em; padding-left: 22vw; font-weight: bold; border-bottom: solid 2px #c4c4c4; color: #00cc99}
+nav.vertical-nav{float: left; position: fixed; left: 0; top: 0; height: 100vh; z-index: 10;}
+nav.vertical-nav h2.site-title{padding: 1em 0; text-transform: uppercase; text-align: center;}
+nav.vertical-nav h2.site-title img{max-height: 120px;}
+nav.vertical-nav .bar{float: left; height: 2.9em; margin: 1.5em 0 5em 0;}
+nav.vertical-nav ul{padding: 0px 2.5em; background-color: #006666; border-radius: 10px;}
+nav.vertical-nav ul li{margin: 2em 0;}
+nav.vertical-nav ul li a{font-weight: bold;}
+nav.vertical-nav ul li a:hover{color: white}
+ul.result{width: 100%; border: 1px solid #ced4da; border-radius: 0.25rem;}
+ul.result li{margin: 0.25rem 0; padding: 0 0.25rem;}
+ul.result li:hover{cursor: pointer; background-color: #a2a2a2;}
+@media only screen and (max-width: 1023px){
+	nav.vertical-nav:after{content: '\f0c9'; font-family: fontawesome; font-size: 1.5rem; position: absolute; right: -1.5em; top: 0;}
+	nav.vertical-nav{left: -21em; transition: left 1s;}
+	nav.vertical-nav.active{left: 0;}
+	div.top{padding-left: 2.5em;}
+	div.top .breadcrumbs i{display: none;}
+	div.welcome{padding-left: 3.5em;}
+}
+div#main.internal{float: left; padding-left: 22vw; background-color: rgba(255, 255, 255, 0.45)}
+a {color: #00cc99;}
+a:hover {color: #006666;}
+
+ul.vertbar{background: linear-gradient(to bottom, #00cc99 0%, #006666 100%);border-radius: 10px;}
+
+
+/*HOME*/
+div.top-row{margin-top: 2em}
+div.middle-row{width: 100%; margin-top: 1.5em;}
+div.bottom-row{width: 100%; margin-top: 1.5em;}
+section.dock{background-color: #FFFFFF; margin: 0 0.75em; padding-top: 1em; padding-bottom: 1.5em; text-align: center;}
+section.dock.first{margin-left: 0;}
+section.dock span{float: left; width: 100%; font-weight: bold;}
+section.dock span.title{font-size: 1.2rem}
+section.dock span.results{font-size: 1.6rem;}
+section.dock.monthly-partial{color: #FFFFFF;}
+section.dock.graphic.lines{width: 70.5%;}
+section.dock.posts article.post{position: relative; float: left; color: #AFAFAF; width: 100%; margin: 0.25em 0}
+section.dock.posts article.post a{text-align: left; float: left; color: #AFAFAF;}
+section.dock.posts article.post .clickstats{text-align: right; float: right; color: #AFAFAF; width: auto;}
+section.dock.posts a.btn{position: absolute; bottom: 1em; right: 1em;}
+
+/*LOGIN*/
+.bg-login{
+	background: linear-gradient(to bottom, #00cc99 0%, #006666 100%);
+	height: 57rem;
+}
+.btn-style {
+	background-color: #00cc99;
+}
+.btn-style:hover {
+	background-color: #006666;
+}
+.recovery-link a{
+	color: #00cc99;
+}
+
+
+#loginForm .msg{margin: 5vh auto;}
+#loginForm .main-logo{margin: 20vh auto 1vh auto; text-align: center; padding: 0!important; max-height: 150px;}
+#loginForm .main-logo img{max-height: 125px;}
+#loginForm .form.dock{margin: 2vh auto}
+#loginForm .form.dock input:not([type="checkbox"]){margin: 2em 0;}
+
+/*POSTS*/
+div.post.list{padding-left: 0;}
+div.post.list section.list{width: 75vw;}
+div.post.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.post.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.post.list section.list section.table div.tbody article.the_post{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*EXTENSIONS*/
+div.extensions.list{padding-left: 0;}
+div.extensions.list section.list{width: 75vw;}
+div.extensions.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.extensions.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.extensions.list section.list section.table div.tbody article.the_extension{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*MEDIAS*/
+div.medias.list{padding-left: 0;}
+div.medias.list section.list{width: 75vw;}
+div.medias.list section.list section.thumbs{width: 95%; margin: 0 auto; background-color: #d8d8d8; box-shadow: 0px 0px 15px 5px #bab6b6 inset; -moz-box-shadow: 0px 0px 15px 5px #bab6b6 inset; -webkit-box-shadow: 0px 0px 15px 5px #bab6b6 inset; -khtml-box-shadow: 0px 0px 15px 5px #bab6b6 inset; -moz-box-shadow: 0px 0px 15px 5px #bab6b6 inset;}
+div.medias.list section.list section.thumbs .thumbnail{height: 10em; overflow: hidden; text-align: center; margin: 1rem; transition: all .5s; -webkit-transition: all .5s; -moz-transition: all .5s; -o-transition: all .5s; -khtml-transition: all .5s;}
+div.medias.list section.list section.thumbs .thumbnail img{width: 100%; transition: all 0.5s;}
+div.medias.list section.list section.thumbs .thumbnail form{display: none;}
+div.medias.list section.list section.thumbs .thumbnail:hover{opacity: 0.5;}
+div.medias.list section.list section.thumbs .thumbnail:hover > img{width: 115%;}
+
+/*USERS*/
+div.users.list{padding-left: 0;}
+div.users.list section.list{width: 75vw;}
+div.users.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.users.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.users.list section.list section.table div.tbody article.the_user{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*CONFIGS*/
+div.configs.list{padding-left: 0;}
+div.configs.list section.list{width: 75vw;}
+div.configs.list section.list section.table div.thead{border: 1px solid #dfdfdf; padding-top: 0.5em; padding-bottom: 0.25em; border-radius: 1em 1em 0 0;}
+div.configs.list section.list section.table div.thead div:not(:first-child){border-left: 1px solid #dfdfdf;}
+div.configs.list section.list section.table div.tbody article.the_config{padding-top: 0.5em; padding-bottom: 0.25em; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; }
+
+/*FORMS*/
+form.row div.alert{margin-top: 1em; text-align: center; width: 75vw;}
+form.row section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row section.top-row span{margin-top: 0.5em;}
+form.row section.top-row span input{margin-left: 0.5em; margin-right: 0.5em;}
+form.row section.post-body{margin-top: 2em;}
+form.row section.right{margin-left: 4em;}
+form.row section.controls{margin-top: 2em;}
+form.row section.controls span{margin-top: 1em;}
+form.row section.post-type{margin-top: 0; min-height: 4em; margin-bottom: 1em; margin-top: 1em;}
+form.row section.post-type div.the_types{padding: 0.5em; border: solid 2px #b1b1b1; margin: 0.5em 0}
+form.row section.post-image div.image_preview{border: solid 2px #b1b1b1; margin: 0.5em 0; padding: 0.5em;}
+form.row section.bottom{width: 75vw; padding: 0.5em; margin-top: 1em;}
+form.row section.bottom section.seo h4, form.row section.bottom section.extensions h4{float: left; width: 100%;}
+form.row section.bottom section.extensions div.controls label{float: left; width: 100%;}
+
+/*CONFIGS FORMS*/
+form.row.the_configs section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row.the_configs section.post-body{margin-top: 2em; width: 75vw; padding: 1em;}
+form.row.the_configs section.right{margin-left: 0;}
+form.row.the_configs section.the_controls{width: 75vw; padding: 1em;}
+form.row.the_configs section.the_controls .controls select{margin: 0.5em 0;}
+
+/*MEDIA FORMS*/
+form.row.the_medias section.top-row{margin-top: 2em; margin-left: 0; padding-left: 0; padding-right: 2em;}
+form.row.the_medias section.media-body div.the_media div.the_preview{display: none; padding: 0.5em; border: solid 2px #b1b1b1;}
+form.row.the_medias section.media-body div.the_media label.the_browse{position: relative;}
+form.row.the_medias section.media-body div.the_media label.the_browse input[type="file"]{display: none; position: absolute; left: 0; right: 0;}
+
+/*FOOTER*/
+footer.internal{float: left; width: 75vw; margin-top: 1.5em; margin-bottom: 2em; padding-top: 1em; padding-bottom: 1em; background-color: #FFFFFF; font-size: 0.825rem;}
+footer span{width: 100%; float: left; text-align: center}
+
+/*CUSTOM*/
+.viewChange{float: right; position: relative; height: 2rem; width: 6rem; content: " "; margin-right: 2.5rem;}
+.viewChange:hover{cursor: pointer}
+.viewChange .switchTrail{position: absolute; content: " "; height: 0.5rem; background-color: #c7c7c7; top: 35%; left: 10%; border-radius: 2.5rem; z-index: 5}
+.viewChange .switchButton{position: absolute; height: 1.5rem; width: 1.5rem; content: " "; top: -0.5rem; border-radius: 2rem; transition: all .2s linear}
+.viewChange .switchButton.off{background-color: #006b50; left: 0.5rem;}
+.viewChange .switchButton.on{background-color: #08c999; left: 3rem;}
+.legendOff{display: none;}
+.row.on{display: -webkit-box;}
+.row.off{display: none;}
+

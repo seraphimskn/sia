@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sigmedserrana",
+  "private_key_id": "491ab8b5e09bb335eae17e82b20a5e5cdda04f0b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCzrpvgq78rBgZ5\noOvxxXQmXl2cqkv0jdoyNqHpYJHERS3x4zl2qgGWbMvj/YyJG1cYeXgR65VPF/Ck\naG2oPPlBD0GhQD3YqIKveHuG0aADVss30hBbAIxMTOiq1j04PaclpVKGx5sM4OsS\nHMm6SOl7idrk3Kdok6pC43pSStRJ2GBBbfcf8xd1uuoz9NM7riTzOWD+qgwZz7iG\nArLjMwcl4bFu1OzN9MtP+DyaXDxb5aEkWKHhefsJv1BxyPorAWZ5FFwRJe1qGu1J\nBDvE2r68kzmV+bbSgCD8egylGNerOsHqkyrIfx1EbX7Q/b/BD8ro+NGsHX7nhKny\nFKEZWrBRAgMBAAECggEAA4ErGKd458+rBinJmFJb2Ni71i+rIha3NAYFQ+5GgY/A\n3Ogr6YDY3ZR7KJP8LvtpyDgsS5su8xc6Mha4VtDzop13z/uXCTgGLoJ41FEX4CDL\n/2d5OrEoy18vpY9eq89mCHGwSaEwiMCFTTnjBF9iMG7oplCYck15A2t46gx8FgGa\nPcRXFFhohw1/4RGNqW+nuE0VtKIK0opcIhAuKni2nFKjOIsoS80RqFlTk8Uzza7+\nWU3A2w1Z01xhN57UzcVTcBCwJQYnxoZ6tuFdYrSGySC2qnWvdqIF5oblMhUM9aNL\noU+g8ZrJKESt6hOPjxmyMapZEb8410TtPdqRp7zKHQKBgQDrl+OqvdGFHZ1RlunV\n2RaVRj0MmI2dHZ9aSnHMpRS+UppvpkTQyGeuIy7Ybe0GFnOvA/4j6W1PbGqbNfwm\n3sjgowgxTMG3a4K45euAvXpnt/nS9eZdNDPFpJysNnbktM+rRqAEn4XjQBVyfekJ\nX84ah698XsXhYkGeC7995c071QKBgQDDPu2daDEeSxem0bp7z2Ca2Yke7qXuMUZp\n3Syd0DExoumexjvtKnqL/i0XpkuMaW9V9BKP1Q9y2DhnU7kdFAScMD7k+rSpN0Vk\nuzODlso8jQkx6yhxvNe9nhoD3C7iJuIym3yJMuQlOkzleGMK3PmIDXal8YIn6Vhf\nm6sabZfMjQKBgE6JMKzfYDQG3kWvkD3og125r2o+hJ7GnDOGM49rzJFxiegEPlZ3\nKBDly5z8cBIic+f45cRk8TqTwqoBAhCXHdG8p2N/2efiIA6xHqOpBmAC9XX84RFa\n8JNHP68s7M9q8vt+rKM95m0OFNg43vFwDY3Mg5RrJ33tukAMXIaEj7kNAoGBAINg\nGn7qFvLtUFLdmH+qwLQxYATCTECEQ38EZfsilZdyqYQ+myAwjxkXxLu/F+K5J0NM\n4hiKIsUCHKHaQhsA10FJbWiiEWIzYKwxEq6ejiJEPEWsmCBAE2LxuUuTorBlvZqT\n6S5gYgdyvT9CzFII8pbLiGSMpym359Eda/pyd8wZAoGAQEmQAr8o28WSOkdSHJxf\ntJin9c2HvO2LuKYJhxEhY7X133mmPZi11paowfi9lOvWwH2CR4LoY0vkCwygHtpE\nPet+Kpk9zIyYnJHOEgMBOlpHDkjM4gkYP+c8cyg+pdV/UflQ4rvPiBMf3d0P6Z7A\nJuXvPwmcChgFg9Laid60BbM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sigmedserrana@sigmedserrana.iam.gserviceaccount.com",
+  "client_id": "108477485475847364571",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sigmedserrana%40sigmedserrana.iam.gserviceaccount.com"
+}

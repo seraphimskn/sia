@@ -1,0 +1,5 @@
+[14/02/2020 17:18:17] - Error: Code: 42S22 - Line 334 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_contrato' in 'where clause'
+[15/02/2020 20:45:56] - Error: Code: 42S22 - Line 334 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_contrato' in 'where clause'
+[12/04/2020 19:06:08] - Error: Code: 42S22 - Line 334 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_usuario' in 'order clause'
+[12/04/2020 19:08:53] - Error: Code: 42S22 - Line 334 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_usuario' in 'order clause'
+[12/04/2020 19:09:33] - Error: Code: 42S22 - Line 334 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_usuario' in 'order clause'
